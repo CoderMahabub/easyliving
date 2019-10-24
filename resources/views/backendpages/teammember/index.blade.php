@@ -11,14 +11,19 @@ Team Member Add
                                         <h4 class="mt-0 header-title">Add Your New Team Member</h4>
 
 
-                                        @if (session('success'))
-                                        <div class="alert alert-success">
-                                            {{ session('success') }}
+                                        
+                                        @if ($errors->any())
+                                        <ul>
+                                        @foreach ($errors->all() as $error)
+                                        <div class="alert alert-danger">
+                                        <li>{{ $error }}</li>
                                         </div>
-                                        @endif
+                                        @endforeach
+                                        </ul>
+                                         @endif
 
 
-                                <form action="{{route('team_member_create')}}" method="post" enctype="multipart\form-data">
+                                <form action="{{route('team_member_create')}}" method="post" enctype="multipart/form-data">
                                     @csrf
 
                                     <div class="form-group row"><label for="example-text-input"

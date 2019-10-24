@@ -36,12 +36,12 @@
                                     <div class="mb-4">
                                         <div class="float-left mini-stat-img mr-4"><img
                                                 src="{{asset('backend/assets/images/services-icon/01.png')}}" alt=""></div>
-                                        <h5 class="font-16 text-uppercase mt-0 text-white-50">Users</h5>
+                                        <h5 class="font-16 text-uppercase mt-0 text-white-50">Registered Users</h5>
                                         <h4 class="font-500">{{(App\User::all()->count())}} <i class="mdi mdi-arrow-up text-success ml-2"></i>
                                         </h4>
-                                        <div class="mini-stat-label bg-success">
+                                        <!-- <div class="mini-stat-label bg-success">
                                             <p class="mb-0">+ 12%</p>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <div class="pt-2">
                                         <div class="float-right"><a href="#" class="text-white-50"><i
@@ -57,12 +57,12 @@
                                     <div class="mb-4">
                                         <div class="float-left mini-stat-img mr-4"><img
                                                 src="{{asset('backend/assets/images/services-icon/02.png')}}" alt=""></div>
-                                        <h5 class="font-16 text-uppercase mt-0 text-white-50">Admins</h5>
-                                        <h4 class="font-500">1 <i class="mdi mdi-arrow-down text-danger ml-2"></i>
+                                        <h5 class="font-16 text-uppercase mt-0 text-white-50">Team Members</h5>
+                                        <h4 class="font-500">{{(App\TeamMember::all()->count())}}<i class="mdi mdi-arrow-down text-danger ml-2"></i>
                                         </h4>
-                                        <div class="mini-stat-label bg-danger">
+                                        <!-- <div class="mini-stat-label bg-danger">
                                             <p class="mb-0">100%</p>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <div class="pt-2">
                                         <div class="float-right"><a href="#" class="text-white-50"><i
@@ -81,9 +81,9 @@
                                         <h5 class="font-16 text-uppercase mt-0 text-white-50">Average Price</h5>
                                         <h4 class="font-500">15.8 <i class="mdi mdi-arrow-up text-success ml-2"></i>
                                         </h4>
-                                        <div class="mini-stat-label bg-info">
+                                        <!-- <div class="mini-stat-label bg-info">
                                             <p class="mb-0">00%</p>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <div class="pt-2">
                                         <div class="float-right"><a href="#" class="text-white-50"><i
@@ -102,9 +102,9 @@
                                         <h5 class="font-16 text-uppercase mt-0 text-white-50">Product Sold</h5>
                                         <h4 class="font-500">2436 <i class="mdi mdi-arrow-up text-success ml-2"></i>
                                         </h4>
-                                        <div class="mini-stat-label bg-warning">
+                                        <!-- <div class="mini-stat-label bg-warning">
                                             <p class="mb-0">+ 84%</p>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <div class="pt-2">
                                         <div class="float-right"><a href="#" class="text-white-50"><i

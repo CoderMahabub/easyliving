@@ -40,7 +40,8 @@ class CustomerregistrationController extends Controller
             //'role_id'=>1,
 
         ]);
-        Alert::success('Status Added Successfully','success');
+
+        Alert::toast('Status Added Successfully','success');
         return back();
     }
 
