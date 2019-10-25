@@ -10,7 +10,8 @@ Use Alert;
 class StatusController extends Controller
 {
     function index(){
-        return view('backendpages.status.index');
+        $statuses =Status::all();
+        return view('backendpages.status.index',compact('statuses'));
     }
 
     function create(Request $request){

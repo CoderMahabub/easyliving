@@ -41,7 +41,7 @@ class CustomerregistrationController extends Controller
 
         ]);
 
-        Alert::toast('Status Added Successfully','success');
+        Alert::toast('Registration Done Successfully','success');
         return back();
     }
 

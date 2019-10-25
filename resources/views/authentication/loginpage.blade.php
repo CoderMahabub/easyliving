@@ -26,6 +26,16 @@
                 <a href="index.html" class="logo logo-admin"><img src="{{ asset('backend/assets/images/logo-sm.png') }}" height="24" alt="logo"></a>
             </div>
             <div class="account-card-content">
+
+            @if ($errors->any())
+                    <ul>
+                    @foreach ($errors->all() as $error)
+                    <div class="alert alert-danger">
+                    <li>{{ $error }}</li>
+                    </div>
+                    @endforeach
+                    </ul>
+                @endif
             <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -99,6 +109,7 @@
     <script src="{{ asset('backend/assets/js/waves.min.js') }}"></script>
     <!-- App js -->
     <script src="{{ asset('backend/assets/js/app.js') }}"></script>
+    <script>@include('sweetalert::alert')</script>
 </body>
 
 </html>

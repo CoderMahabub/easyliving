@@ -53,6 +53,7 @@ return array(
     'App\\TeamMember' => $baseDir . '/app/TeamMember.php',
     'App\\User' => $baseDir . '/app/User.php',
     'App\\about' => $baseDir . '/app/about.php',
+    'App\\role' => $baseDir . '/app/role.php',
     'Carbon\\Carbon' => $vendorDir . '/nesbot/carbon/src/Carbon/Carbon.php',
     'Carbon\\CarbonImmutable' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonImmutable.php',
     'Carbon\\CarbonInterface' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonInterface.php',

@@ -12,4 +12,5 @@ class UserController extends Controller
        //echo $users;
         return view('backendpages.userpage.index',compact('users'));
     }
+    
 }

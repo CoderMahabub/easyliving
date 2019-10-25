@@ -24,6 +24,7 @@ User
                                                     <th>Thana</th>
                                                     <th>Created at</th>
                                                     <th>Updated at</th>
+                                                    <th>Action</th>
                                                 </tr>
                                             </thead>
                                             
@@ -39,6 +40,7 @@ User
                                                     <td>{{ $user->thana }}</td>
                                                     <td>{{ $user->created_at }}</td>
                                                     <td>{{ $user->updated_at }}</td>
+                                                    <td><a class="btn btn-danger" href="#">Remove To Trash</a></td>
                                                 </trle-striped>
                                                 @endforeach
 

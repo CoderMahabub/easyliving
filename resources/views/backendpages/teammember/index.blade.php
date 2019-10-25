@@ -65,4 +65,58 @@ Team Member Add
                         </div><!-- end row -->
                     </div><!-- container-fluid -->
 
+                    <!-- View Table Starts from here -->
+                    <div class="container">
+                <!-- end row -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="mt-0 header-title">Available Roles</h4>
+                                    <p class="text-muted m-b-30">These roles are already exits.</p>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-striped table-dark mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Member's Photo</th>
+                                                    <th>Member's Name</th>
+                                                    <th>Designation</th>
+                                                    <th>Detail</th>
+                                                    <th>Facebook Link</th>
+                                                    <th>Twitter Link</th>
+                                                    <th>LinkedIn Link</th>
+                                                    <th>Created at</th>
+                                                    <th>Updated at</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            
+                                            <tbody>
+
+                                            @foreach ( $teammembers as $teammember)
+                                                <tr>
+                                                    <th>{{ $teammember->id }}</th>
+                                                    <th>{{ $teammember->member_photo }}</th>
+                                                    <th>{{ $teammember->member_name }}</th>
+                                                    <th>{{ $teammember->designation }}</th>
+                                                    <th>{{ $teammember->detail }}</th>
+                                                    <th>{{ $teammember->facebook_link }}</th>
+                                                    <th>{{ $teammember->twitter_link }}</th>
+                                                    <th>{{ $teammember->linkedin_link }}</th>
+                                                    <td>{{ $teammember->created_at }}</td>
+                                                    <td>{{ $teammember->updated_at }}</td>
+                                                    <td> <a class="btn btn-warning"href="#">Delete</a></td>
+                                                </tr>
+                                                @endforeach
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <!-- View Table Ends from here -->
+
 @endsection

@@ -50,7 +50,7 @@
                         @endif
 
 
-
+                        @include('sweetalert::alert')
 
                         <!-- =========//error========= -->
                     @if ($errors->any())

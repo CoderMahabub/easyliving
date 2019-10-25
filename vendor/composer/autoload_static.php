@@ -478,6 +478,7 @@ class ComposerStaticInit89941734e2763d8d2744f3790d7fa474
         'App\\TeamMember' => __DIR__ . '/../..' . '/app/TeamMember.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'App\\about' => __DIR__ . '/../..' . '/app/about.php',
+        'App\\role' => __DIR__ . '/../..' . '/app/role.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonImmutable' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonImmutable.php',
         'Carbon\\CarbonInterface' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterface.php',

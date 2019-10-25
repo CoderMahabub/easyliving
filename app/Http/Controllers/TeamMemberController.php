@@ -10,7 +10,8 @@ Use Image;
 class TeamMemberController extends Controller
 {
     function index(){
-        return view('backendpages.teammember.index');
+        $teammembers=TeamMember::all();
+        return view('backendpages.teammember.index',compact('teammembers'));
     }
 
     function create(Request $request){

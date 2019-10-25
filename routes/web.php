@@ -8,59 +8,49 @@
 //homepage
 Route::get('/index','HomepageController@index')->name('homepage');
 
-
 //aboutpage
 Route::get('/about-us','AboutController@index')->name('aboutpage');
 
 
+//===========Service Pages===============
 //serivepage
 Route::get('/service','ServicepageController@index')->name('servicepage');
-
 
 //servicehouseholdpage
 Route::get('/service-household','ServicehouseholdpageController@servicehousehold')->name('servicehouseholdpage');
 
-
 //serviceinteriorpage
 Route::get('/service-interior','ServiceinteriorpageController@serviceinterior')->name('serviceinteriorpage');
-
 
 //servicedesignpage
 Route::get('/service-design','ServicedesignpageController@servicedesign')->name('servicedesignpage');
 
-
 //servicetilingpage
 Route::get('/service-tiling','ServicetilingpageController@servicetiling')->name('servicetilingpage');
 
-
 //servicepavergpage
 Route::get('/service-paver','ServicepaverController@servicepaver')->name('servicepavergpage');
-
 
 //servicesolargpage
 Route::get('/service-solar','ServicesolarpageCotroller@servicesolar')->name('servicesolargpage');
 
 
+
 //faqpage
 Route::get('/faq','FaqpageController@index')->name('faqpage');
-
 
 //contactpage
 Route::get('/contact','ContactpageController@index')->name('contactpage');
 
-
 //teampage
 Route::get('/team-member','TeammemberpageController@index')->name('teampage');
 
-
-//Reservation
+//reservation
 Route::get('/reservation', 'ReservationpageController@index')->name('reservation');
 
-
-
-//Registration Pages
+//customer_registration
 Route::get('/customer/registration','CustomerregistrationController@index')->name('customer_registration');
-
+//registration_create
 Route::post('/customer/registration/create','CustomerregistrationController@create')->name('registration_create');
 
 
@@ -78,35 +68,36 @@ Route::get('/customer/login','HomepageController@customer_login')->name('custome
 //Dashboard Home
 Route::get('/admin/dashboard','DashboardController@index')->name('dashboard');
 
-//Users
+//user
 Route::get('/admin/user','UserController@index')->name('user');
 
 
-//Order
+//about_us
 Route::get('/admin/order','OrderController@index')->name('order');
 
-//About Us
+//about_us
 Route::get('/admin/about-us','AboutusController@index')->name('about_us');
 
-//About Us Create
+//create
 Route::post('/admin/about-us/create','AboutusController@create')->name('create');
 
-
-//Status
+//status_index
 Route::get('/admin/status','StatusController@index')->name('status_index');
 
-//Status
+//status_create
 Route::post('/admin/status/create','StatusController@create')->name('status_create');
-
-
 
 //team_member
 Route::get('/admin/team_member','TeamMemberController@index')->name('team_member');
 
-//team_member
+//team_member_create
 Route::post('/admin/team_member/create','TeamMemberController@create')->name('team_member_create');
 
 
+//role_index
+Route::get('/admin/role','RoleController@index')->name('role_index');
+//role_create
+Route::post('/admin/role/create','RoleController@create')->name('role_create');
 
 
 
@@ -117,9 +108,9 @@ Route::post('/admin/team_member/create','TeamMemberController@create')->name('te
 //Previous HomePage
 
 
-/*<!-- Route::get('/', function () {
-    return view('welcome');
-});*/
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 
 //New Homepage
