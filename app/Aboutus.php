@@ -6,5 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Aboutus extends Model
 {
-    //
+    protected $fillable=[
+        'role_name',
+        'subtitle',
+        'description',
+    ];
+
 }

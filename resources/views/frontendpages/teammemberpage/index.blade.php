@@ -117,7 +117,7 @@ Team Members
                     <div class="row">
                     @foreach($team_members as $team_member)
                     	<div class="col-sm-4">
-                        	<div class="img"><img src="{{asset('uploads/team_members')}}/{{($team_member->member_photo)}} alt="Images" /></div>
+                        	<div class="img"><img src="{{asset('uploads/team_members')}}/{{$team_member->member_photo}}" alt="Image" /></div>
                             <div class="name"><a href="team-member.html"><span>{{ $team_member->member_name }}</span>  |  {{ $team_member->designation }}</a></div> 
                             <p>"{{ $team_member->detail }}"</p>
                         	<ul class="list-inline social-share">
