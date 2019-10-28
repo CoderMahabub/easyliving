@@ -14,6 +14,9 @@ class RoleController extends Controller
         return view('backendpages.role.index',compact('roles'));
     }
     function create(Request $request){
+      $validatedData = $request->validate([
+        'role_name' => 'required|unique|max:25',
+    ]);
         Role::insert([
             'role_name'=>$request->role_name,
             'created_at'=>Carbon::now(),

@@ -11,7 +11,7 @@ Team Member Add
                                         <h4 class="mt-0 header-title">Add Your New Team Member</h4>
 
 
-                                        
+
                                         @if ($errors->any())
                                         <ul>
                                         @foreach ($errors->all() as $error)
@@ -91,7 +91,7 @@ Team Member Add
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
-                                            
+
                                             <tbody>
 
                                             @foreach ( $teammembers as $teammember)
@@ -100,7 +100,7 @@ Team Member Add
                                                     <th>{{ $teammember->member_photo }}</th>
                                                     <th>{{ $teammember->member_name }}</th>
                                                     <th>{{ $teammember->designation }}</th>
-                                                    <th>{{ $teammember->detail }}</th>
+                                                    <th>{{ Str::limit($teammember->detail,20) }}</th>
                                                     <th>{{ $teammember->facebook_link }}</th>
                                                     <th>{{ $teammember->twitter_link }}</th>
                                                     <th>{{ $teammember->linkedin_link }}</th>

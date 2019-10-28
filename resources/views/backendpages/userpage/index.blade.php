@@ -27,7 +27,7 @@ User
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
-                                            
+
                                             <tbody>
 
                                             @foreach ($users as $user)
@@ -35,7 +35,7 @@ User
                                                     <th scope="row">{{ $user->id }}</th>
                                                     <td>{{ $user->name }}</td>
                                                     <td>{{ $user->email }}</td>
-                                                    <td>{{ $user->role_id }}</td>
+                                                    <td>{{ $user->relationshipBetweenRole->role_name }}</td>
                                                     <td>{{ $user->district }}</td>
                                                     <td>{{ $user->thana }}</td>
                                                     <td>{{ $user->created_at }}</td>

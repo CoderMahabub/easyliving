@@ -10,17 +10,17 @@ Add New Role
                                     <div class="card-body">
                                         <h4 class="mt-0 header-title">Add New Role</h4>
                                  <br>
-  
+
                         <!-- =========//error========= -->
-                    @if ($errors->any())
-                        <ul>
-                        @foreach ($errors->all() as $error)
-                        <div class="alert alert-warning">
-                        <li>{{ $error }}</li>
-                        </div>
-                        @endforeach
-                        </ul>
-                    @endif
+                            @if ($errors->any())
+                                <ul>
+                                @foreach ($errors->all() as $error)
+                                <div class="alert alert-warning">
+                                <li>{{ $error }}</li>
+                                </div>
+                                @endforeach
+                                </ul>
+                            @endif
 
 
                                 <form action="{{ route('role_create')}}" method="post">
@@ -63,7 +63,7 @@ Add New Role
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
-                                            
+
                                             <tbody>
 
                                             @foreach ( $roles as $role)

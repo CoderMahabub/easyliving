@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 Use App\User;
+Use App\role;
 
 class UserController extends Controller
 {
@@ -12,5 +13,5 @@ class UserController extends Controller
        //echo $users;
         return view('backendpages.userpage.index',compact('users'));
     }
-    
+
 }
