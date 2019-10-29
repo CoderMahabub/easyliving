@@ -17,13 +17,13 @@
 </head>
 
 <body>
-    <div class="home-btn d-none d-sm-block"><a href="index.html" class="text-dark"><i class="fas fa-home h2"></i></a></div>
+    <div class="home-btn d-none d-sm-block"><a href="{{ route('homepage') }}" class="text-dark"><b>Goto Homepag </b> <i class="fas fa-home h2"></i></a></div>
     <div class="wrapper-page">
         <div class="card overflow-hidden account-card mx-3">
             <div class="bg-primary p-4 text-white text-center position-relative">
                 <h4 class="font-20 m-b-5">Welcome Back !</h4>
                 <p class="text-white-50 mb-4">Sign in to continue to EasyLiving Services.</p>
-                <a href="index.html" class="logo logo-admin"><img src="{{ asset('backend/assets/images/logo-sm.png') }}" height="24" alt="logo"></a>
+                <a href="{{ route('homepage') }}" class="logo logo-admin"><img src="{{ asset('backend/assets/images/logo-sm.png') }}" height="24" alt="logo"></a>
             </div>
             <div class="account-card-content">
 

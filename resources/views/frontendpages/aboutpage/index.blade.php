@@ -158,47 +158,6 @@ About Us
                     </div>
                 </div>
             </section>
-        	<!-- Our team section -->
-            <section id="our-team" class="section-block">
-            	<div class="container">
-                	<div class="top-desc text-center">
-                        <h2>Our TEAM</h2>
-                        <p class="sub-heading">You’re in the right place!</p>
-                    </div>
-                    <div class="row">
-                    	<div class="col-sm-4">
-                        	<div class="img"><img src="{{asset('frontend/assets/images/team-img/team-img1.jpg')}}" alt="" /></div>
-                            <div class="name"><a href="team-member.html"><span>John Doe</span>  |  Co-Founder &quot; CEO</a></div> 
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                        	<ul class="list-inline social-share">
-                                <li><a href="#"><i aria-hidden="true" class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i aria-hidden="true" class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i aria-hidden="true" class="fa fa-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-4">
-                        	<div class="img"><img src="{{asset('frontend/assets/images/team-img/team-img1.jpg')}}" alt="" /></div>
-                            <div class="name"><a href="team-member.html"><span>John Doe</span>  |  Co-Founder &quot; CEO</a></div> 
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                        	<ul class="list-inline social-share">
-                                <li><a href="#"><i aria-hidden="true" class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i aria-hidden="true" class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i aria-hidden="true" class="fa fa-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-4">
-                        	<div class="img"><img src="{{asset('frontend/assets/images/team-img/team-img1.jpg')}}" alt="" /></div>
-                            <div class="name"><a href="team-member.html"><span>John Doe</span>  |  Co-Founder &quot; CEO</a></div> 
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                        	<ul class="list-inline social-share">
-                                <li><a href="#"><i aria-hidden="true" class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i aria-hidden="true" class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i aria-hidden="true" class="fa fa-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section> 
         	
             <!-- Our services Section -->
             <section id="our-services" class="section-block">

@@ -63,7 +63,7 @@ Contact Us
                                         <div role="tabpanel" class="tab-pane" id="signup">
                                             <form>
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" placeholder="Mobile Number"/>
+                                                    <input type="text" name= class="form-control" placeholder="Mobile Number"/>
                                                 </div>
                                                 <div class="form-group">
                                                     <input type="email" class="form-control" placeholder="Email ID"/>
@@ -116,7 +116,7 @@ Contact Us
                     <div class="row">
                     	<div class="col-sm-8">
                         	<h3>Write Us</h3>
-                        	<form id="contact_form">
+                        	<form>
                             	<div class="row">
                                 	<div class="col-md-6">
                                     	<div class="form-group">
@@ -147,10 +147,10 @@ Contact Us
                                 </div>
                                 <div class="form-group">
                                     <label>Message</label>
-                                    <textarea name="msg" class="form-control" ></textarea>
+                                    <textarea name="message" class="form-control" ></textarea>
                                 </div>
                                 <div class="form-group">
-                                	<input type="submit" class="btn btn-info" value="SEND" id="attending_btn"/>
+                                	<input type="submit" class="btn btn-info" value="SEND"/>
                                 </div>
                             </form>
                         </div>

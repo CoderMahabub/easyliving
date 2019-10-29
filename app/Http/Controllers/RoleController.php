@@ -15,7 +15,7 @@ class RoleController extends Controller
     }
     function create(Request $request){
       $validatedData = $request->validate([
-        'role_name' => 'required|unique|max:25',
+        'role_name' => 'required|max:25',
     ]);
         Role::insert([
             'role_name'=>$request->role_name,

@@ -45,4 +45,48 @@ About Us
                         </div><!-- end row -->
                     </div><!-- container-fluid -->
 
+
+                    <!-- end row -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="mt-0 header-title">About Us Files</h4>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-striped table-dark mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Title</th>
+                                                    <th>SubTitle's Name</th>
+                                                    <th>Description</th>
+                                                    <th>Created at</th>
+                                                    <th>Updated at</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+
+                                            @foreach ( $aboutuses as $aboutus)
+                                                <tr>
+                                                    <th>{{ $aboutus->id }}</th>
+                                                    <th>{{ $aboutus->title }}</th>
+                                                    <th>{{ $aboutus->subtitle }}</th>
+                                                    <th>{{ Str::limit($aboutus->description,20) }}</th>
+                                                    <td>{{ $aboutus->created_at }}</td>
+                                                    <td>{{ $aboutus->updated_at }}</td>
+                                                    <td> <a class="btn btn-warning"href="#">Delete</a></td>
+                                                </tr>
+                                                @endforeach
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <!-- View Table Ends from here -->
+
 @endsection

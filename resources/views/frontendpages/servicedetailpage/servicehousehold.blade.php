@@ -1,4 +1,4 @@
-@extends ('homepage.app')
+@extends ('frontendpages.homepage.app')
 @section('title')
 HouseHold Service In 
 @endsection
@@ -120,7 +120,7 @@ HouseHold Service In
                         </div>
 
                         <!-- Banner Section -->
-        @extends ('homepage.banner')
+        @extends ('frontendpages.homepage.banner')
         @section('banner-title')
         <div class="top-desc text-center">
             <h2>HOUSEHOLD REPAIRS SERVICE</h2>
@@ -236,162 +236,12 @@ HouseHold Service In
                                         </div>
                                     </div>
                                 </div>
-                                <div class="text-center"><a href="service-1.html" class="btn btn-info">Book Your Service</a></div>
+                                <div class="text-center"><a href="{{ route('reservation') }}" class="btn btn-info">Book Your Service</a></div>
                             </div>
                         </div>
                    </div>
                 </div>
             </section>
         	
-        	<!-- Our features section -->
-            <section id="our-features" class="section-block">
-            	<div class="container">
-                    <div class="row">
-                    	<div class="col-sm-3">
-                        	<span class="icon-box"><i class="icon icon-serviceguarantee" aria-hidden="true"></i></span>
-                            <div class="name">Service Guarantee</div> 
-                            <p>Lorem Ipsum is simply dummy text the printing and typesetting industry.</p>
-                        </div>
-                        <div class="col-sm-3">
-                        	<span class="icon-box"><i class="icon icon-24x7support" aria-hidden="true"></i></span>
-                            <div class="name">24 x 7 Supporte</div> 
-                            <p>Lorem Ipsum is simply dummy text the printing and typesetting industry.</p>
-                        </div>
-                        <div class="col-sm-3">
-                        	<span class="icon-box"><i class="icon icon-insuranceclaim" aria-hidden="true"></i></span>
-                            <div class="name">Insurance Claim</div> 
-                            <p>Lorem Ipsum is simply dummy text the printing and typesetting industry.</p>
-                        </div>
-                        <div class="col-sm-3">
-                        	<span class="icon-box"><i class="icon icon-trainedcertified" aria-hidden="true"></i></span>
-                            <div class="name">Trained & Certified</div> 
-                            <p>Lorem Ipsum is simply dummy text the printing and typesetting industry.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>  
-        	<!-- Our services Section -->
-            <section id="services" class="section-block">
-            	<div class="container">
-                	<div class="top-desc text-center">
-                        <h2>our Services</h2>
-                        <p class="sub-heading">You’re in the right place!</p>
-                    </div>
-                    <div class="service-slider">
-                        <div class="col-md-3 col-sm-6">
-                        	<a href="gallery.html">
-                                <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img1.jpg')}}" alt="" /></div>
-                                <span class="name">Electrical</span>
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <a href="gallery.html">
-                                <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img2.jpg')}}" alt="" /></div>
-                                <span class="name">Plumbing</span>
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <a href="gallery.html">
-                                <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img3.jpg')}}" alt="" /></div>
-                                <span class="name">Pest Control</span>
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <a href="gallery.html">
-                                <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img4.jpg')}}" alt="" /></div>
-                                <span class="name">Painting</span>
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <a href="gallery.html">
-                                <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img5.jpg')}}" alt="" /></div>
-                                <span class="name">Cleaning</span>
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <a href="gallery.html">
-                                <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img6.jpg')}}" alt="" /></div>
-                                <span class="name">Appliances</span>
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <a href="gallery.html">
-                                <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img7.jpg')}}" alt="" /></div>
-                                <span class="name">Carpentry</span>
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <a href="gallery.html">
-                                <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img8.jpg')}}" alt="" /></div>
-                                <span class="name">Computer Repair</span>
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <a href="gallery.html">
-                                <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img9.jpg')}}" alt="" /></div>
-                                <span class="name">Home Security</span>
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <a href="gallery.html">
-                                <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img10.jpg')}}" alt="" /></div>
-                                <span class="name">Geyser</span>
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <a href="gallery.html">
-                                <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img11.jpg')}}" alt="" /></div>
-                                <span class="name">Vehicle Care</span>
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <a href="gallery.html">
-                                <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img12.jpg')}}" alt="" /></div>
-                                <span class="name">Spa</span>
-                            </a>
-                        </div>
-                    </div>  
-                </div>
-            </section> 
-          	<!-- Our serviceman section -->
-        	<section id="our-servicemen" class="section-block">
-            	<div class="container">
-                	<div class="top-desc text-center">
-                        <h2>Our Servicemen</h2>
-                        <p class="sub-heading">You’re in the right place!</p>
-                    </div>
-                    <div class="row">
-                    	<div class="col-sm-3">
-                        	<div>
-                            	<img src="{{asset('frontend/assets/images/servicemen-img/img1.jpg')}}" alt="" class="img-responsive" />
-                                <div class="name">Pick a Services</div>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industry's standard  text specimen book.</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                        	<div>
-                            	<img src="{{asset('frontend/assets/images/servicemen-img/img2.jpg')}}" alt="" class="img-responsive" />
-                                <div class="name">Pick a Services</div>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industry's standard  text specimen book.</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                        	<div>
-                            	<img src="{{asset('frontend/assets/images/servicemen-img/img3.jpg')}}" alt="" class="img-responsive" />
-                                <div class="name">Pick a Services</div>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industry's standard  text specimen book.</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                        	<div>
-                            	<img src="{{asset('frontend/assets/images/servicemen-img/img4.jpg')}}" alt="" class="img-responsive" />
-                                <div class="name">Pick a Services</div>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industry's standard  text specimen book.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-      	</div>
+        	
 @endsection

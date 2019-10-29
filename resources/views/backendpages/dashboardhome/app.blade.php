@@ -143,8 +143,8 @@
                         <li><a href="{{route('status_index')}}" class="waves-effect"><i class="ti-alarm-clock"></i><span>Add Status</span></a></li>
                         <li><a href="{{route('team_member')}}" class="waves-effect"><i class="ti-id-badge"></i><span>Add Team Member</span></a></li>
                         <li><a href="{{route('role_index')}}" class="waves-effect"><i class="ti-id-badge"></i><span>Add User Role</span></a></li>
+                        <li><a href="{{route('about_us')}}" class="waves-effect"><i class="ti-book"></i><span>Add AboutUs</span></a></li>
                         <li><a href="{{route('order')}}" class="waves-effect"><i class="ti-shopping-cart-full"></i><span>Order</span></a></li>
-                        <li><a href="{{route('about_us')}}" class="waves-effect"><i class="ti-book"></i><span>About Us</span></a></li>
                         <li><a href="javascript:void(0);" class="waves-effect"><i class="ti-email"></i><span> Email
                                     <span class="float-right menu-arrow"><i
                                             class="mdi mdi-chevron-right"></i></span></span></a>

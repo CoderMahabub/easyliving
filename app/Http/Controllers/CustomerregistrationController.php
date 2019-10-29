@@ -19,7 +19,7 @@ class CustomerregistrationController extends Controller
 
         $request->validate([
             'name' =>'required|min:3|max:20',
-            'email' =>'required|unique',
+            'email' =>'required',
             'password' =>'required',
             'telephone_number' =>'required',
             'address' =>'required',

@@ -16,11 +16,13 @@ Route::get('/about-us','AboutController@index')->name('aboutpage');
 //serivepage
 Route::get('/service','ServicepageController@index')->name('servicepage');
 
+//serviceinteriorpage
+Route::get('/service-interior','ServiceinteriorpageController@serviceinterior')->name('serviceinteriorpage');
+
 //servicehouseholdpage
 Route::get('/service-household','ServicehouseholdpageController@servicehousehold')->name('servicehouseholdpage');
 
-//serviceinteriorpage
-Route::get('/service-interior','ServiceinteriorpageController@serviceinterior')->name('serviceinteriorpage');
+
 
 //servicedesignpage
 Route::get('/service-design','ServicedesignpageController@servicedesign')->name('servicedesignpage');
@@ -42,6 +44,7 @@ Route::get('/faq','FaqpageController@index')->name('faqpage');
 //contactpage
 Route::get('/contact','ContactpageController@index')->name('contactpage');
 
+
 //teampage
 Route::get('/team-member','TeammemberpageController@index')->name('teampage');
 
@@ -56,7 +59,7 @@ Route::post('/customer/registration/create','CustomerregistrationController@crea
 
 Route::get('/customer/login','HomepageController@customer_login')->name('customer_login');
 
-
+  
 
 
 

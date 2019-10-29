@@ -21,7 +21,7 @@
 
 
     <!-- CSS Stylesheet -->
-    <link href="{{ asset('frontend/assets/css/bootstrap.css')}}" rel="stylesheet"><!-- bootstrap.min css -->
+    <link href="{{ asset('frontend/assets/css/bootstrap.css') }}" rel="stylesheet"><!-- bootstrap.min css -->
     <link href="{{ asset('frontend/assets/css/slick.css')}}" rel="stylesheet"><!-- slick css -->
     <link href="{{ asset('frontend/assets/css/slick-theme.css') }}" rel="stylesheet"><!-- slick-theme css -->
     <link href="{{ asset('frontend/assets/css/bootstrap-select.css') }}" rel="stylesheet"><!-- bootstrap selectbox css -->
@@ -116,7 +116,7 @@
                             <div class="row">
                             	<div class="col-xs-6">
                                 	<ul class="links">
-                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="{{ route('home') }}">Home</a></li>
                                         <li><a href="about-us.html">About</a></li>
                                         <li><a href="#">Blog</a></li>
                                         <li><a href="#">For Corporates</a></li>

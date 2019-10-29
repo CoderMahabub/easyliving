@@ -27,8 +27,7 @@
 
 <body>
 <div class="container">
-    <div class="home-btn d-none d-sm-block"><a href="index.html" class="text-white"><i class="fas fa-home h2"></i></a></div>
-    <!-- Begin page -->
+<div class="home-btn d-none d-sm-block"><a href="{{ route('homepage') }}" class="text-dark"> <b>Goto Homepag </b><i class="fas fa-home h2"></i>e</a></div>    <!-- Begin page -->
     <div class="row">
         <div class="col-md-4">
             <div class="card">

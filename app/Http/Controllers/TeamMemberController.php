@@ -15,6 +15,13 @@ class TeamMemberController extends Controller
     }
 
     function create(Request $request){
+        $validatedData = $request->validate([
+            'member_photo' => 'required',
+            'member_name' => 'required|min:3|max:25',
+            'designation' => 'required|min:3|max:25',
+            'detail' => 'required|min:3|max:250',
+        ]);
+
         $last_inserted_id = TeamMember::insertGetId([
             'member_photo' =>$request ->member_photo,
             'member_name' =>$request ->member_name,

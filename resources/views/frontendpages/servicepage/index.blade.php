@@ -107,159 +107,88 @@ Services
 
 
 
-        <!-- Content Start -->
-        <div id="content">
-        	<div class="container">
-                <div class="big-demo go-wide" data-js="filtering-demo">
-                    <br>
-                    <br>
-                    <div class="grid">
-                        <div class="col-lg-4 col-md-6 col-sm-12 element-item electrical" data-category="electrical">
-                            <div class="gallery-item">
-                            <h3>Electrical</h3>
-                                <div class="item-media">
-                                    <img src="{{asset('frontend/assets/images/service-img/service-img1.jpg')}}" alt="" />
-                                    <div class="media-links">
-                                    	<div class="links-wrap">
-                                        	<a class="p-view prettyPhoto " title="" href="service-overview.html">
-                                            	<i class="fa fa-search" aria-hidden="true"></i>
-                                            </a> 
-                                        	<a href="{{asset('frontend/assets/images/service-img/service-img1.jpg')}}" class="p-link example-image-link" data-lightbox="example-set" data-title="Electrical">
-                                            	<i class="fa fa-expand" aria-hidden="true"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item-content">
-                                    <h6 class="item-meta greylinks">
-                                    	<a href="gallery-single.html">Interior Renovation</a>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 element-item plumbing " data-category="plumbing">
-                            <div class="gallery-item">
-                            <h3>Electrical</h3>
-                                <div class="item-media">
-                                    <img src="{{asset('frontend/assets/images/service-img/service-img2.jpg')}}" alt="" />
-                                    <div class="media-links">
-                                    	<div class="links-wrap">
-                                        	<a class="p-view prettyPhoto " title="" href="service-overview.html">
-                                            	<i class="fa fa-search" aria-hidden="true"></i>
-                                            </a>
-                                        	<a href="{{asset('frontend/assets/images/service-img/service-img2.jpg')}}" class="p-link example-image-link" data-lightbox="example-set" data-title="Plumbing">
-                                            	<i class="fa fa-expand" aria-hidden="true"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item-content">
-                                    <h6 class="item-meta greylinks">
-                                    	<a href="gallery-single.html">Design and Build</a>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 element-item pestcontrol " data-category="pestcontrol">
-                            <div class="gallery-item">
-                            <h3>Electrical</h3>
-                                <div class="item-media">
-                                    <img src="{{asset('frontend/assets/images/service-img/service-img3.jpg')}}" alt="" />
-                                    <div class="media-links">
-                                    	<div class="links-wrap">
-                                        	<a class="p-view prettyPhoto " title="" href="service-overview.html">
-                                            	<i class="fa fa-search" aria-hidden="true"></i>
-                                            </a>
-                                        	<a href="{{asset('frontend/ssets/images/service-img/service-img3.jpg')}}" class="p-link example-image-link" data-lightbox="example-set" data-title="Pest Control">
-                                            	<i class="fa fa-expand" aria-hidden="true"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item-content">
-                                    <h6 class="item-meta greylinks">
-                                    	<a href="gallery-single.html">Tiling and Painting</a>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 element-item painting" data-category="painting">
-                            <div class="gallery-item">
-                            <h3>Electrical</h3>
-                                <div class="item-media">
-                                    <img src="{{asset('frontend/assets/images/service-img/service-img4.jpg')}}" alt="" />
-                                    <div class="media-links">
-                                    	<div class="links-wrap">
-                                        	<a class="p-view prettyPhoto " title="" href="service-overview.html">
-                                            	<i class="fa fa-search" aria-hidden="true"></i>
-                                            </a>
-                                        	<a href="{{asset('frontend/assets/images/service-img/service-img4.jpg')}}" class="p-link example-image-link" data-lightbox="example-set" data-title="Painting">
-                                            	<i class="fa fa-expand" aria-hidden="true"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item-content">
-                                    <h6 class="item-meta greylinks">
-                                    	<a href="gallery-single.html">Paver Wlakways</a>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 element-item cleaning" data-category="cleaning">
-                            <div class="gallery-item">
-                            <h3>Electrical</h3>
-                                <div class="item-media">
-                                    <img src="{{asset('frontend/assets/images/service-img/service-img5.jpg')}}" alt="" />
-                                    <div class="media-links">
-                                    	<div class="links-wrap">
-                                        	<a class="p-view prettyPhoto " title="" href="service-household">
-                                            	<i class="fa fa-search" aria-hidden="true"></i>
-                                            </a>
-                                        	<a href="{{asset('frontend/assets/images/service-img/service-img5.jpg')}}" class="p-link example-image-link" data-lightbox="example-set" data-title="Cleaning">
-                                            	<i class="fa fa-expand" aria-hidden="true"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item-content">
-                                    <h6 class="item-meta greylinks">
-                                    	<a href="gallery-single.html">Household Rapair</a>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 element-item appliance " data-category="appliance">
-                            <div class="gallery-item">
-                            <h3>Electrical</h3>
-                                <div class="item-media">
-                                    <img src="{{asset('frontend/assets/images/service-img/service-img6.jpg')}}" alt="" />
-                                    <div class="media-links">
-                                    	<div class="links-wrap">
-                                        	<a class="p-view prettyPhoto " title="" href="service-overview.html">
-                                            	<i class="fa fa-search" aria-hidden="true"></i>
-                                            </a>
-                                        	<a href="{{asset('frontend/assets/images/service-img/service-img6.jpg')}}" class="p-link example-image-link" data-lightbox="example-set" data-title="Appliances">
-                                            	<i class="fa fa-expand" aria-hidden="true"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item-content">
-                                    <h6 class="item-meta greylinks">
-                                    	<a href="gallery-single.html">Solar Systems</a>
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-
-                        
-
+ 
+        	<!-- Our services Section -->
+            <section id="services" class="section-block">
+            	<div class="container">
+                	<div class="top-desc text-center">
+                        <h2>our Services</h2>
+                        <p class="sub-heading">You’re in the right place!</p> 
                     </div>
+                        <div class="col-md-3 col-sm-6 bottom-gap">
+                        	<a href="{{ route('serviceinteriorpage') }}">
+                                <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img1.jpg')}}" alt="" /></div>
+                                <span class="name">Electrical</span>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-6 bottom-gap">
+                            <a href="{{ route('serviceinteriorpage') }}">
+                                <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img2.jpg')}}" alt="" /></div>
+                                <span class="name">Plumbing</span>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-6 bottom-gap">
+                            <a href="{{ route('serviceinteriorpage') }}">
+                                <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img3.jpg')}}" alt="" /></div>
+                                <span class="name">Pest Control</span>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-6 bottom-gap">
+                            <a href="{{ route('serviceinteriorpage') }}">
+                                <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img4.jpg')}}" alt="" /></div>
+                                <span class="name">Painting</span>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-6 bottom-gap">
+                            <a href="{{ route('serviceinteriorpage') }}">
+                                <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img5.jpg')}}" alt="" /></div>
+                                <span class="name">Cleaning</span>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-6 bottom-gap">
+                            <a href="{{ route('serviceinteriorpage') }}">
+                                <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img6.jpg')}}" alt="" /></div>
+                                <span class="name">Appliances</span>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-6 bottom-gap">
+                            <a href="{{ route('serviceinteriorpage') }}">
+                                <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img7.jpg')}}" alt="" /></div>
+                                <span class="name">Carpentry</span>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-6 bottom-gap">
+                            <a href="{{ route('serviceinteriorpage') }}">
+                                <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img8.jpg')}}" alt="" /></div>
+                                <span class="name">Computer Repair</span>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-6 bottom-gap">
+                            <a href="{{ route('serviceinteriorpage') }}">
+                                <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img9.jpg')}}" alt="" /></div>
+                                <span class="name">Home Security</span>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-6 bottom-gap">
+                            <a href="{{ route('serviceinteriorpage') }}">
+                                <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img10.jpg')}}" alt="" /></div>
+                                <span class="name">Geyser</span>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-6 bottom-gap">
+                            <a href="{{ route('serviceinteriorpage') }}">
+                                <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img11.jpg')}}" alt="" /></div>
+                                <span class="name">Vehicle Care</span>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-6 bottom-gap">
+                            <a href="{{ route('serviceinteriorpage') }}">
+                                <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img12.jpg')}}" alt="" /></div>
+                                <span class="name">Spa</span>
+                            </a>
+                        </div>
+
                 </div>
-			</div>
-       	</div>      
-            
+            </section> 
            
-            
 @endsection

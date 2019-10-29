@@ -12,7 +12,8 @@ class AboutusController extends Controller
 {
     //index
     function index(){
-        return view('backendpages.aboutpage.index');
+        $aboutuses = Aboutus::all();
+        return view('backendpages.aboutpage.index',compact('aboutuses'));
     }
 
 

@@ -433,6 +433,7 @@ class ComposerStaticInit89941734e2763d8d2744f3790d7fa474
     public static $classMap = array (
         'App\\Aboutus' => __DIR__ . '/../..' . '/app/Aboutus.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\Contactpage' => __DIR__ . '/../..' . '/app/Contactpage.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\AboutController' => __DIR__ . '/../..' . '/app/Http/Controllers/AboutController.php',
         'App\\Http\\Controllers\\AboutusController' => __DIR__ . '/../..' . '/app/Http/Controllers/AboutusController.php',
@@ -450,6 +451,7 @@ class ComposerStaticInit89941734e2763d8d2744f3790d7fa474
         'App\\Http\\Controllers\\HomepageController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomepageController.php',
         'App\\Http\\Controllers\\OrderController' => __DIR__ . '/../..' . '/app/Http/Controllers/OrderController.php',
         'App\\Http\\Controllers\\ReservationpageController' => __DIR__ . '/../..' . '/app/Http/Controllers/ReservationpageController.php',
+        'App\\Http\\Controllers\\RoleController' => __DIR__ . '/../..' . '/app/Http/Controllers/RoleController.php',
         'App\\Http\\Controllers\\ServicedesignpageController' => __DIR__ . '/../..' . '/app/Http/Controllers/ServicedesignpageController.php',
         'App\\Http\\Controllers\\ServicehouseholdpageController' => __DIR__ . '/../..' . '/app/Http/Controllers/ServicehouseholdpageController.php',
         'App\\Http\\Controllers\\ServiceinteriorpageController' => __DIR__ . '/../..' . '/app/Http/Controllers/ServiceinteriorpageController.php',

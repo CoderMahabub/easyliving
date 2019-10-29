@@ -126,9 +126,8 @@ Team Members
                                 <li><a href="{{ $team_member->linkedin_link }}"><i aria-hidden="true" class="fa fa-linkedin"></i></a></li>
                             </ul>
                         </div>
-                   
+                    @endforeach
 
-                @endforeach
                 </div>
                     </div>
                 </div>

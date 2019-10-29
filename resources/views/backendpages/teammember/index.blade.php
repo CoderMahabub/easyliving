@@ -10,20 +10,16 @@ Team Member Add
                                     <div class="card-body">
                                         <h4 class="mt-0 header-title">Add Your New Team Member</h4>
 
-
-
-                                        @if ($errors->any())
-                                        <ul>
-                                        @foreach ($errors->all() as $error)
-                                        <div class="alert alert-danger">
-                                        <li>{{ $error }}</li>
-                                        </div>
-                                        @endforeach
-                                        </ul>
-                                         @endif
-
-
-                                <form action="{{route('team_member_create')}}" method="post" enctype="multipart/form-data">
+                        @if ($errors->any())
+                            <ul>
+                            @foreach ($errors->all() as $error)
+                            <div class="alert alert-danger">
+                            <li>{{ $error }}</li>
+                            </div>
+                            @endforeach
+                            </ul>
+                        @endif
+                                <form action="{{ route('team_member_create')}}" method="post" enctype="multipart/form-data">
                                     @csrf
 
                                     <div class="form-group row"><label for="example-text-input"
@@ -108,7 +104,7 @@ Team Member Add
                                                     <td>{{ $teammember->updated_at }}</td>
                                                     <td> <a class="btn btn-warning"href="#">Delete</a></td>
                                                 </tr>
-                                                @endforeach
+                                                 @endforeach
 
                                             </tbody>
                                         </table>

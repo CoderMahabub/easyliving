@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Aboutus' => $baseDir . '/app/Aboutus.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
+    'App\\Contactpage' => $baseDir . '/app/Contactpage.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\AboutController' => $baseDir . '/app/Http/Controllers/AboutController.php',
     'App\\Http\\Controllers\\AboutusController' => $baseDir . '/app/Http/Controllers/AboutusController.php',
@@ -25,6 +26,7 @@ return array(
     'App\\Http\\Controllers\\HomepageController' => $baseDir . '/app/Http/Controllers/HomepageController.php',
     'App\\Http\\Controllers\\OrderController' => $baseDir . '/app/Http/Controllers/OrderController.php',
     'App\\Http\\Controllers\\ReservationpageController' => $baseDir . '/app/Http/Controllers/ReservationpageController.php',
+    'App\\Http\\Controllers\\RoleController' => $baseDir . '/app/Http/Controllers/RoleController.php',
     'App\\Http\\Controllers\\ServicedesignpageController' => $baseDir . '/app/Http/Controllers/ServicedesignpageController.php',
     'App\\Http\\Controllers\\ServicehouseholdpageController' => $baseDir . '/app/Http/Controllers/ServicehouseholdpageController.php',
     'App\\Http\\Controllers\\ServiceinteriorpageController' => $baseDir . '/app/Http/Controllers/ServiceinteriorpageController.php',
