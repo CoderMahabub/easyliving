@@ -32,7 +32,7 @@ class TeamMemberController extends Controller
             'linkedin_link' =>$request ->linkedin_link,
         ]);
 
-            // photo upload
+    // photo upload
 
    if ($request->hasFile('member_photo')) {
 	$photo_upload     =  $request ->member_photo;
@@ -46,5 +46,8 @@ class TeamMemberController extends Controller
         Alert::toast('Successfully Added Team Member', 'success');
         return back();
     }
+
+
+
     //end
 }

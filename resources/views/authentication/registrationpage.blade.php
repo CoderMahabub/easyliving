@@ -62,7 +62,7 @@
                         </ul>
                     @endif
 
-                        <form class="form-horizontal m-t-30" action="{{route('registration_create')}}" method="post">
+                        <form class="form-horizontal m-t-30" action="{{route('registration_create')}}" method="post" enctype="multipart/form-data">
                           @csrf
                             <div class="form-group">
                                     <!-- name -->
@@ -105,6 +105,17 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                            <label>Select Photo</label>
+                            <div class="col-md-12">
+                                <input class="form-control" type="file" name="user_photo">
+                            </div>
+                                </div>
+                            </div>
+
+                                        
                             <div class="form-group">
                                 <div class="row">
                                   <!-- Password -->

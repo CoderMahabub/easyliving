@@ -9,7 +9,7 @@ Reservation
  <section class="service-detail-wrapper">
             	<div class="container">
                 	<div class="top-desc text-center">
-                        <h2>Service Detail</h2>
+                        <h2>BOOK YOUR SERVICE</h2>
                     </div>
                     <div class="row">
                     	<div class="col-md-8 col-md-offset-2">
@@ -48,27 +48,18 @@ Reservation
 
                                 <div class="row">
                                 	<div class="col-sm-6">
-                                        <div class="form-group">
-                                            <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                                                <input class="form-control" size="16" type="text" value="" readonly>
-                                                <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
-                                            </div>
-                                        </div>
+                                    <div class="form-group">
+                                    <input class="form-control" type="date" value="2011-08-19">
+                                    </div>
                                     </div>
                                     <div class="col-sm-6">
                                     <div class="form-group">
-                                        <div class="input-group date form_time" data-date="" data-date-format="hh:ii" data-link-field="dtp_input3" data-link-format="hh:ii">
-                                            <input class="form-control" size="16" type="text" value="" readonly>
-                                            <span class="input-group-addon"><span class="fa fa-clock-o"></span></span>
-                                        </div>
+                                    <input class="form-control" type="time" value="13:45:00">
                                     </div>
                                     </div>
-                                </div>
+                                    </div>
 
-                                <div class="top-desc text-center">
-                        <h2>Personal Detail</h2>
-                    </div>
-
+<br>
 
                             	<div class="row">
                                 	<div class="col-sm-6">
@@ -106,7 +97,7 @@ Reservation
 
                                 <div class="form-group text-center">
                                 	<div class="group-btn">
-                                    	<a href="#" class="btn btn-info">Submit</a>
+                                    	<a href="#" class="btn btn-info">BooK</a>
                                     </div>
                                 </div>
                                 

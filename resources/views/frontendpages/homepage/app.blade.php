@@ -50,7 +50,7 @@
                 	<div class="col-lg-4 col-md-3 col-sm-2">
                     	<div class="navbar-header">
                             <a class="navbar-brand" href="{{route('homepage')}}">
-                                <img src="frontend/assets/images/logo.png" alt="Logo" class="img-responsive" />
+                                <img src="{{ asset('frontend/assets/images/logo.png') }}" alt="Logo" class="img-responsive" />
                             </a>
                             <button type="button" class="navbar-toggle">
                                 <span class="sr-only">Toggle navigation</span>
@@ -163,8 +163,10 @@
                             <h3>Follow us</h3>
                             <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
                             <div class="contact-us">
-                            	<input type="email" placeholder="Enter email address" />
-                                <input type="submit" class="btn btn-primary" value="Submit" />
+                            <form action="#" method="post">
+                            	<input type="email" placeholder="Enter email address" name=subscribe/>
+                                <input type="submit" class="btn btn-primary" value="Subscribe" />
+                            </form>
                             </div>
                             <ul class="list-inline social-links">
                                 <li><a href="#"><i aria-hidden="true" class="fa fa-facebook"></i></a></li>

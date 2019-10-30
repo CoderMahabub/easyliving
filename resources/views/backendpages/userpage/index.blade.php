@@ -22,14 +22,13 @@ User
                                                     <th>Role</th>
                                                     <th>District</th>
                                                     <th>Thana</th>
+                                                    <th>Photo</th>
                                                     <th>Created at</th>
                                                     <th>Updated at</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
-
                                             <tbody>
-
                                             @foreach ($users as $user)
                                                 <tr>
                                                     <th scope="row">{{ $user->id }}</th>
@@ -38,12 +37,12 @@ User
                                                     <td>{{ $user->relationshipBetweenRole->role_name }}</td>
                                                     <td>{{ $user->district }}</td>
                                                     <td>{{ $user->thana }}</td>
+                                                    <td> <img src="{{ asset('uploads/users') }}/{{ $user->user_photo }}" ></td>
                                                     <td>{{ $user->created_at }}</td>
                                                     <td>{{ $user->updated_at }}</td>
                                                     <td><a class="btn btn-danger" href="#">Remove To Trash</a></td>
                                                 </trle-striped>
                                                 @endforeach
-
                                             </tbody>
                                         </table>
                                     </div>

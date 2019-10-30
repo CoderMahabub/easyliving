@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration
             $table->longText('address');
             $table->string('district')->nullable();
             $table->string('thana')->nullable();
+            $table->string('user_photo');
             $table->integer('role_id')->default(2);
             $table->rememberToken();
             $table->timestamps();

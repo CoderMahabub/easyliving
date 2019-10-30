@@ -93,7 +93,7 @@ Team Member Add
                                             @foreach ( $teammembers as $teammember)
                                                 <tr>
                                                     <th>{{ $teammember->id }}</th>
-                                                    <th>{{ $teammember->member_photo }}</th>
+                                                    <th><img src="{{ asset('uploads/team_members') }}/{{ $teammember->member_photo }}"</th>
                                                     <th>{{ $teammember->member_name }}</th>
                                                     <th>{{ $teammember->designation }}</th>
                                                     <th>{{ Str::limit($teammember->detail,20) }}</th>
