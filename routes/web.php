@@ -48,8 +48,16 @@ Route::get('/contact','ContactpageController@index')->name('contactpage');
 //teampage
 Route::get('/team-member','TeammemberpageController@index')->name('teampage');
 
+
+
 //reservation
 Route::get('/reservation', 'ReservationpageController@index')->name('reservation');
+Route::post('/reservation/create', 'ReservationpageController@create')->name('reservation_create');
+
+
+
+
+
 
 //customer_registration
 Route::get('/customer/registration','CustomerregistrationController@index')->name('customer_registration');

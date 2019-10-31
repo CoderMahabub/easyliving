@@ -8,7 +8,6 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Aboutus' => $baseDir . '/app/Aboutus.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
-    'App\\Contactpage' => $baseDir . '/app/Contactpage.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\AboutController' => $baseDir . '/app/Http/Controllers/AboutController.php',
     'App\\Http\\Controllers\\AboutusController' => $baseDir . '/app/Http/Controllers/AboutusController.php',
@@ -51,6 +50,7 @@ return array(
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
     'App\\Providers\\EventServiceProvider' => $baseDir . '/app/Providers/EventServiceProvider.php',
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
+    'App\\Reservation' => $baseDir . '/app/Reservation.php',
     'App\\Status' => $baseDir . '/app/Status.php',
     'App\\TeamMember' => $baseDir . '/app/TeamMember.php',
     'App\\User' => $baseDir . '/app/User.php',

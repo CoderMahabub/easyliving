@@ -1,6 +1,6 @@
 @extends('frontendpages.homepage.app')
 @section('title')
-Reservation
+Book Services
 @endsection
 
 @section('content')
@@ -13,12 +13,24 @@ Reservation
                     </div>
                     <div class="row">
                     	<div class="col-md-8 col-md-offset-2">
-                        	<form action="#" method="post">
-                                
+
+
+                         @if ($errors->any())
+                                <ul>
+                                @foreach ($errors->all() as $error)
+                                <div class="alert alert-danger">
+                                <li>{{ $error }}</li>
+                                </div>
+                                @endforeach
+                                </ul>
+                            @endif
+                            
+                        	<form action="{{ route('reservation_create') }}" method="post">
+                                @csrf
                             <div class="row">
                                 	<div class="col-sm-6">
                                     	<div class="form-group">
-                                        	<select class="selectpicker">
+                                        	<select class="selectpicker" name="service">
                                                 <option>Select Service</option>
                                                 <option>Electrical</option>
                                                 <option>Security</option>
@@ -36,7 +48,7 @@ Reservation
                                     </div>
                                     <div class="col-sm-6">
                                     	<div class="form-group">
-                                        	<select class="selectpicker">
+                                        	<select class="selectpicker" name="sub_service">
                                                 <option>Select Sub Service</option>
                                                 <option>Installation, Repair or Replacement:</option>
                                                 <option>Drain Cleaning and Sewers</option>
@@ -48,40 +60,39 @@ Reservation
 
                                 <div class="row">
                                 	<div class="col-sm-6">
-                                    <div class="form-group">
-                                    <input class="form-control" type="date" value="2011-08-19">
-                                    </div>
+                                        <div class="form-group">
+                                            <input class="form-control" type="date" name="service_date" value="2011-08-19">
+                                        </div>
                                     </div>
                                     <div class="col-sm-6">
-                                    <div class="form-group">
-                                    <input class="form-control" type="time" value="13:45:00">
+                                        <div class="form-group">
+                                            <input class="form-control" type="time" name="service_time" value="13:45:00">
+                                        </div>
                                     </div>
-                                    </div>
-                                    </div>
-
+                                </div>
 <br>
 
                             	<div class="row">
                                 	<div class="col-sm-6">
                                     	<div class="form-group">
-                                        	<input type="text" class="form-control" placeholder="Your Name" />
+                                        	<input type="text" class="form-control" name="client_name" placeholder="Your Name" />
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                     	<div class="form-group">
-                                        	<input type="text" class="form-control" placeholder="Mobile Number"/>
+                                        	<input type="text" class="form-control" name="client_phone" placeholder="Mobile Number"/>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                 	<div class="col-sm-6">
                                     	<div class="form-group">
-                                        	<input type="email" class="form-control" placeholder="Email" />
+                                        	<input type="email" class="form-control" name="client_email" placeholder="Email" />
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                     	<div class="form-group">
-                                        	<input type="password" class="form-control" placeholder="Password"/>
+                                        	<input type="password" class="form-control" name="password" placeholder="Password"/>
                                         </div>
                                     </div>
                                 </div>
@@ -89,7 +100,7 @@ Reservation
                                 <div class="row">
                                 	<div class="col-sm-12">
                                     	<div class="form-group">
-                                        	<textarea class="form-control" placeholder="Address" ></textarea>
+                                        	<textarea class="form-control" name="client_address"  placeholder="Address" ></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -97,7 +108,7 @@ Reservation
 
                                 <div class="form-group text-center">
                                 	<div class="group-btn">
-                                    	<a href="#" class="btn btn-info">BooK</a>
+                                    	<input type="submit" value="BooK" class="btn btn-info">
                                     </div>
                                 </div>
                                 

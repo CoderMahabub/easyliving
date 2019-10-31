@@ -433,7 +433,6 @@ class ComposerStaticInit89941734e2763d8d2744f3790d7fa474
     public static $classMap = array (
         'App\\Aboutus' => __DIR__ . '/../..' . '/app/Aboutus.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
-        'App\\Contactpage' => __DIR__ . '/../..' . '/app/Contactpage.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\AboutController' => __DIR__ . '/../..' . '/app/Http/Controllers/AboutController.php',
         'App\\Http\\Controllers\\AboutusController' => __DIR__ . '/../..' . '/app/Http/Controllers/AboutusController.php',
@@ -476,6 +475,7 @@ class ComposerStaticInit89941734e2763d8d2744f3790d7fa474
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\Reservation' => __DIR__ . '/../..' . '/app/Reservation.php',
         'App\\Status' => __DIR__ . '/../..' . '/app/Status.php',
         'App\\TeamMember' => __DIR__ . '/../..' . '/app/TeamMember.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
