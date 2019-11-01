@@ -13,6 +13,17 @@ class ReservationpageController extends Controller
         return view('frontendpages.reservationpage.index');
     }
     public function create(Request $request){
+        $validatedData = $request->validate([
+            'service' => 'required',
+            'sub_service' => 'required',
+            'service_date' => 'required',
+            'service_time' => 'required',
+            'client_name' => 'required|min:3|max:25',
+            'client_phone' => 'required|numeric',
+            'client_email' => 'required|email',
+            'password' => 'required',
+            'client_address' => 'required',
+        ]);
         Reservation::insert([
             'service'=>$request->service,
             'sub_service'=>$request->sub_service,
@@ -25,7 +36,7 @@ class ReservationpageController extends Controller
             'client_address'=>$request->client_address,            
             'created_at'=>Carbon::now(),
         ]);
-        Alert::toast('Role Added Successfully','success');
+        Alert::toast('Your Booking Added Successfully','success');
         return back();
     }
 }

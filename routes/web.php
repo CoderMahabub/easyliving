@@ -52,6 +52,7 @@ Route::get('/team-member','TeammemberpageController@index')->name('teampage');
 
 //reservation
 Route::get('/reservation', 'ReservationpageController@index')->name('reservation');
+
 Route::post('/reservation/create', 'ReservationpageController@create')->name('reservation_create');
 
 
@@ -83,8 +84,12 @@ Route::get('/admin/dashboard','DashboardController@index')->name('dashboard');
 Route::get('/admin/user','UserController@index')->name('user');
 
 
-//about_us
-Route::get('/admin/order','OrderController@index')->name('order');
+
+
+
+//reservationView
+Route::get('/admin/reservation','reservationController@reservation')->name('reservation');
+
 
 //about_us
 Route::get('/admin/about-us','AboutusController@index')->name('about_us');

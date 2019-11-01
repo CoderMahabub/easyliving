@@ -8,6 +8,7 @@ Book Services
  <!-- Register Section -->
  <section class="service-detail-wrapper">
             	<div class="container">
+                
                 	<div class="top-desc text-center">
                         <h2>BOOK YOUR SERVICE</h2>
                     </div>
@@ -61,7 +62,7 @@ Book Services
                                 <div class="row">
                                 	<div class="col-sm-6">
                                         <div class="form-group">
-                                            <input class="form-control" type="date" name="service_date" value="2011-08-19">
+                                            <input class="form-control" type="date" name="service_date" value="2019-08-19">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">

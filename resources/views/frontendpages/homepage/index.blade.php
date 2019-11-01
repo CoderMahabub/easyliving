@@ -173,73 +173,73 @@
                     </div>
                     <div class="service-slider">
                         <div class="col-md-3 col-sm-6">
-                        	<a href="gallery.html">
+                        	<a href="{{ route('serviceinteriorpage') }}">
                                 <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img1.jpg')}}" alt="" /></div>
                                 <span class="name">Electrical</span>
                             </a>
                         </div>
                         <div class="col-md-3 col-sm-6">
-                            <a href="gallery.html">
+                            <a href="{{ route('serviceinteriorpage') }}">
                                 <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img2.jpg')}}" alt="" /></div>
                                 <span class="name">Plumbing</span>
                             </a>
                         </div>
                         <div class="col-md-3 col-sm-6">
-                            <a href="gallery.html">
+                            <a href="{{ route('serviceinteriorpage') }}">
                                 <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img3.jpg')}}" alt="" /></div>
                                 <span class="name">Pest Control</span>
                             </a>
                         </div>
                         <div class="col-md-3 col-sm-6">
-                            <a href="gallery.html">
+                            <a href="{{ route('serviceinteriorpage') }}">
                                 <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img4.jpg')}}" alt="" /></div>
                                 <span class="name">Painting</span>
                             </a>
                         </div>
                         <div class="col-md-3 col-sm-6">
-                            <a href="gallery.html">
+                            <a href="{{ route('serviceinteriorpage') }}">
                                 <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img5.jpg')}}" alt="" /></div>
                                 <span class="name">Cleaning</span>
                             </a>
                         </div>
                         <div class="col-md-3 col-sm-6">
-                            <a href="gallery.html">
+                            <a href="{{ route('serviceinteriorpage') }}">
                                 <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img6.jpg')}}" alt="" /></div>
                                 <span class="name">Appliances</span>
                             </a>
                         </div>
                         <div class="col-md-3 col-sm-6">
-                            <a href="gallery.html">
+                            <a href="{{ route('serviceinteriorpage') }}">
                                 <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img7.jpg')}}" alt="" /></div>
                                 <span class="name">Carpentry</span>
                             </a>
                         </div>
                         <div class="col-md-3 col-sm-6">
-                            <a href="gallery.html">
+                            <a href="{{ route('serviceinteriorpage') }}">
                                 <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img8.jpg')}}" alt="" /></div>
                                 <span class="name">Computer Repair</span>
                             </a>
                         </div>
                         <div class="col-md-3 col-sm-6">
-                            <a href="gallery.html">
+                            <a href="{{ route('serviceinteriorpage') }}">
                                 <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img9.jpg')}}" alt="" /></div>
                                 <span class="name">Home Security</span>
                             </a>
                         </div>
                         <div class="col-md-3 col-sm-6">
-                            <a href="gallery.html">
+                            <a href="{{ route('serviceinteriorpage') }}">
                                 <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img10.jpg')}}" alt="" /></div>
                                 <span class="name">Geyser</span>
                             </a>
                         </div>
                         <div class="col-md-3 col-sm-6">
-                            <a href="gallery.html">
+                            <a href="{{ route('serviceinteriorpage') }}">
                                 <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img11.jpg')}}" alt="" /></div>
                                 <span class="name">Vehicle Care</span>
                             </a>
                         </div>
                         <div class="col-md-3 col-sm-6">
-                            <a href="gallery.html">
+                            <a href="{{ route('serviceinteriorpage') }}">
                                 <div class="img"><img src="{{asset('frontend/assets/images/service-img/service-img12.jpg')}}" alt="" /></div>
                                 <span class="name">Spa</span>
                             </a>

@@ -120,8 +120,8 @@
                                     <div class="mb-4">
                                         <div class="float-left mini-stat-img mr-4"><img
                                                 src="{{asset('backend/assets/images/services-icon/04.png')}}" alt=""></div>
-                                        <h5 class="font-16 text-uppercase mt-0 text-white-50">Available Roles</h5>
-                                        <h4 class="font-500">{{(App\Role::all()->count())}} <i class="mdi mdi-arrow-up text-success ml-2"></i>
+                                        <h5 class="font-16 text-uppercase mt-0 text-white-50">Total Reservation</h5>
+                                        <h4 class="font-500">{{(App\Reservation::all()->count())}}<i class="mdi mdi-arrow-up text-success ml-2"></i>
                                         </h4>
                                         <!-- <div class="mini-stat-label bg-warning">
                                             <p class="mb-0">+ 84%</p>
@@ -142,7 +142,7 @@
                                         <div class="float-left mini-stat-img mr-4"><img
                                                 src="{{asset('backend/assets/images/services-icon/04.png')}}" alt=""></div>
                                         <h5 class="font-16 text-uppercase mt-0 text-white-50">Available Roles</h5>
-                                        <h4 class="font-500">{{(App\Role::all()->count())}} <i class="mdi mdi-arrow-up text-success ml-2"></i>
+                                        <h4 class="font-500">656<i class="mdi mdi-arrow-up text-success ml-2"></i>
                                         </h4>
                                         <!-- <div class="mini-stat-label bg-warning">
                                             <p class="mb-0">+ 84%</p>
@@ -163,7 +163,7 @@
                                         <div class="float-left mini-stat-img mr-4"><img
                                                 src="{{asset('backend/assets/images/services-icon/04.png')}}" alt=""></div>
                                         <h5 class="font-16 text-uppercase mt-0 text-white-50">Available Roles</h5>
-                                        <h4 class="font-500">{{(App\Role::all()->count())}} <i class="mdi mdi-arrow-up text-success ml-2"></i>
+                                        <h4 class="font-500">55<i class="mdi mdi-arrow-up text-success ml-2"></i>
                                         </h4>
                                         <!-- <div class="mini-stat-label bg-warning">
                                             <p class="mb-0">+ 84%</p>
@@ -184,7 +184,7 @@
                                         <div class="float-left mini-stat-img mr-4"><img
                                                 src="{{asset('backend/assets/images/services-icon/04.png')}}" alt=""></div>
                                         <h5 class="font-16 text-uppercase mt-0 text-white-50">Available Roles</h5>
-                                        <h4 class="font-500">{{(App\Role::all()->count())}} <i class="mdi mdi-arrow-up text-success ml-2"></i>
+                                        <h4 class="font-500">55df<i class="mdi mdi-arrow-up text-success ml-2"></i>
                                         </h4>
                                         <!-- <div class="mini-stat-label bg-warning">
                                             <p class="mb-0">+ 84%</p>
