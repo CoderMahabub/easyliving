@@ -10,8 +10,9 @@ Use Alert;
 class StatusController extends Controller
 {
     function index(){
-        $statuses =Status::all();
-        return view('backendpages.status.index',compact('statuses'));
+        $statuses = Status::all();
+        $deleted_statuses = Status::onlyTrashed()->paginate(3);
+        return view('backendpages.status.index',compact('statuses','deleted_statuses'));
     }
 
     function create(Request $request){
@@ -22,10 +23,12 @@ class StatusController extends Controller
         Alert::toast('Status Added Successfully','success');
         return back();
     }
-    function edit($food_id){
-        $single_status=Status::find($food_id);
+    function edit($status_id){
+        $single_status = Status::find($status_id);
         return view('backendpages.status.edit',compact('single_status'));
     }
+
+
     function update(Request $request){
         Status::find($request->status_id)->update([
             'status_name'=>$request->status_name,
@@ -35,11 +38,16 @@ class StatusController extends Controller
         return redirect('/admin/status/');
     }
 
-    function delete($food_id){
-        $single_status=Status::find($food_id)->delete();
+    function delete($status_id){
+        $single_status=Status::find($status_id)->delete();
         Alert::toast('Status Deleted Successfully','success');
         return back();
     }
-        
+         
+    function restore($status_id){
+        Status::onlyTrashed()->where('id',$status_id)->restore();
+        Alert::toast('Restore Status Successfully','success');
+        return back();
+    }
 }
 

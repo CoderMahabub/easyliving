@@ -85,6 +85,7 @@ Route::post('/admin/status/create','StatusController@create')->name('status_crea
 Route::get('/admin/status/{status_id}','StatusController@edit')->name('status_edit');
 Route::post('/admin/status/update','StatusController@update')->name('status_update');
 Route::get('/admin/status/delete/{status_id}','StatusController@delete')->name('status_delete');
+Route::get('/admin/status/restore/{status_id}','StatusController@restore')->name('status_restore');
 
 
 //========TEAM MEMBER===========
