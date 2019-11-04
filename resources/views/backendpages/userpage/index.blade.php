@@ -29,7 +29,7 @@ User
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach ($users as $user)
+                                            @forelse ($users as $user)
                                                 <tr>
                                                     <th scope="row">{{ $user->id }}</th>
                                                     <td>{{ $user->name }}</td>
@@ -41,10 +41,13 @@ User
                                                     <td>{{ $user->created_at }}</td>
                                                     <td>{{ $user->updated_at }}</td>
                                                     <td><a class="btn btn-danger" href="#">Remove To Trash</a></td>
+                                                    @empty
+                                                    <td>No Data</td>
                                                 </trle-striped>
-                                                @endforeach
+                                                @endforelse
                                             </tbody>
                                         </table>
+                                        {{ $users->links() }}
                                     </div>
                                 </div>
                             </div>

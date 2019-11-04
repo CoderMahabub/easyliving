@@ -12,27 +12,18 @@ Route::get('/index','HomepageController@index')->name('homepage');
 Route::get('/about-us','AboutController@index')->name('aboutpage');
 
 
-//===========Service Pages===============
-//serivepage
+//========SERVICE PAGES===========
 Route::get('/service','ServicepageController@index')->name('servicepage');
-
 //serviceinteriorpage
 Route::get('/service-interior','ServiceinteriorpageController@serviceinterior')->name('serviceinteriorpage');
-
 //servicehouseholdpage
 Route::get('/service-household','ServicehouseholdpageController@servicehousehold')->name('servicehouseholdpage');
-
-
-
 //servicedesignpage
 Route::get('/service-design','ServicedesignpageController@servicedesign')->name('servicedesignpage');
-
 //servicetilingpage
 Route::get('/service-tiling','ServicetilingpageController@servicetiling')->name('servicetilingpage');
-
 //servicepavergpage
 Route::get('/service-paver','ServicepaverController@servicepaver')->name('servicepavergpage');
-
 //servicesolargpage
 Route::get('/service-solar','ServicesolarpageCotroller@servicesolar')->name('servicesolargpage');
 
@@ -50,22 +41,18 @@ Route::get('/team-member','TeammemberpageController@index')->name('teampage');
 
 
 
-//reservation
+//========RESERVATION===========
 Route::get('/reservation', 'ReservationpageController@index')->name('reservation');
-
 Route::post('/reservation/create', 'ReservationpageController@create')->name('reservation_create');
 
 
 
-
-
-
-//customer_registration
+//========CUSTOMER REGISTRATION===========
 Route::get('/customer/registration','CustomerregistrationController@index')->name('customer_registration');
-//registration_create
 Route::post('/customer/registration/create','CustomerregistrationController@create')->name('registration_create');
 
 
+//========CUSTOMER LOGIN===========
 Route::get('/customer/login','HomepageController@customer_login')->name('customer_login');
 
   
@@ -83,36 +70,30 @@ Route::get('/admin/dashboard','DashboardController@index')->name('dashboard');
 //user
 Route::get('/admin/user','UserController@index')->name('user');
 
-
-
-
-
 //reservationView
-Route::get('/admin/reservation','reservationController@reservation')->name('reservation');
+Route::get('/admin/reservation','reservationController@reservation')->name('reservation_view');
 
 
-//about_us
+//========ABOUT US===========
 Route::get('/admin/about-us','AboutusController@index')->name('about_us');
-
-//create
 Route::post('/admin/about-us/create','AboutusController@create')->name('create');
 
-//status_index
+
+//========STATUS(insert,edit,update,delete)===========
 Route::get('/admin/status','StatusController@index')->name('status_index');
-
-//status_create
 Route::post('/admin/status/create','StatusController@create')->name('status_create');
+Route::get('/admin/status/{status_id}','StatusController@edit')->name('status_edit');
+Route::post('/admin/status/update','StatusController@update')->name('status_update');
+Route::get('/admin/status/delete/{status_id}','StatusController@delete')->name('status_delete');
 
-//team_member
+
+//========TEAM MEMBER===========
 Route::get('/admin/team_member','TeamMemberController@index')->name('team_member');
-
-//team_member_create
 Route::post('/admin/team_member/create','TeamMemberController@create')->name('team_member_create');
 
 
-//role_index
+//========ROLE===========
 Route::get('/admin/role','RoleController@index')->name('role_index');
-//role_create
 Route::post('/admin/role/create','RoleController@create')->name('role_create');
 
 

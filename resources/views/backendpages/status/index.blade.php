@@ -52,8 +52,8 @@ Status Name
                                                 <tr>
                                                     <th>ID</th>
                                                     <th>Status Name</th>
-                                                    <th>Created at</th>
-                                                    <th>Updated at</th>
+                                                    <th>Created At</th>
+                                                    <th>Updated At</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
@@ -66,7 +66,11 @@ Status Name
                                                     <td>{{ $status->status_name }}</td>
                                                     <td>{{ $status->created_at }}</td>
                                                     <td>{{ $status->updated_at }}</td>
-                                                    <td> <a class="btn btn-warning"href="#">Delete</a></td>
+                                                    <td> 
+                                                        <a class="btn btn-primary" href="#">View</a>
+                                                        <a class="btn btn-warning" href="{{ url('/admin/status') }}/{{ $status->id }}">Edit</a>
+                                                        <a class="btn btn-danger" href="{{ url('/admin/status/delete') }}/{{ $status->id }}">Delete</a>
+                                                    </td>
                                                 </trle-striped>
                                                 @endforeach
 

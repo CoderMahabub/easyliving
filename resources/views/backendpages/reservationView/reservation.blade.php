@@ -32,7 +32,7 @@ Total Reservations
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach ($reservations as $reservation)
+                                            @forelse ($reservations as $reservation)
                                                 <tr>
                                                     <th scope="row">{{ $reservation->id }}</th>
                                                     <td>{{ $reservation->service }}</td>
@@ -48,10 +48,13 @@ Total Reservations
                                                     <td>{{ $reservation->updated_at }}</td>
                                                     <td><a class="btn btn-danger" href="#">Remove To Trash</a></td>
                                                 </tr table-striped>
-                                                @endforeach
+                                                @empty
+                                                    <td>No Data</td>
+                                                @endforelse
                                             </tbody>
                                         </table>
                                     </div>
+                                    {{ $reservations->links() }}
                                 </div>
                             </div>
                         </div>

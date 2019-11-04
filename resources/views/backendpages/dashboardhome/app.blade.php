@@ -148,7 +148,7 @@
                                             class="mdi mdi-chevron-right"></i></span></span></a>
                             <ul class="submenu">
                             <li><a href="{{route('user')}}" class="waves-effect"><i class="ti-user"></i><span>All Users</span></a></li>
-                        <li><a href="{{route('reservation')}}" class="waves-effect"><i class="ti-shopping-cart-full"></i><span>Reservations</span></a></li>
+                        <li><a href="{{route('reservation_view')}}" class="waves-effect"><i class="ti-shopping-cart-full"></i><span>Reservations</span></a></li>
                         <li><a href="{{route('status_index')}}" class="waves-effect"><i class="ti-alarm-clock"></i><span>Add Status</span></a></li>
                         <li><a href="{{route('team_member')}}" class="waves-effect"><i class="ti-id-badge"></i><span>Add Team Member</span></a></li>
                         <li><a href="{{route('role_index')}}" class="waves-effect"><i class="ti-id-badge"></i><span>Add User Role</span></a></li>

@@ -8,7 +8,7 @@ use App\Reservation;
 class reservationController extends Controller
 {
     function reservation(){
-        $reservations =Reservation::all();
+        $reservations =Reservation::latest()->paginate(5);
         return view('backendpages.reservationView.reservation',compact('reservations'));
     }
 }

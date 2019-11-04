@@ -1,4 +1,5 @@
 @extends('frontendpages.homepage.app')
+
 @section('title')
 Book Services
 @endsection
@@ -126,6 +127,6 @@ Book Services
         @section('banner-title')
         Reserve Your Need
         @endsection
-
+@include('sweetalert::alert')
         <!-- Banner Section End-->
 @endsection

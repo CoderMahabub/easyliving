@@ -36,7 +36,7 @@ class ReservationpageController extends Controller
             'client_address'=>$request->client_address,            
             'created_at'=>Carbon::now(),
         ]);
-        Alert::toast('Your Booking Added Successfully','success');
+        Alert::toast('Booking Added Successfully','success');
         return back();
     }
 }
