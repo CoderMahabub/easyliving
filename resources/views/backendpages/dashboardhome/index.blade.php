@@ -78,8 +78,8 @@
                                     <div class="mb-4">
                                         <div class="float-left mini-stat-img mr-4"><img
                                                 src="{{asset('backend/assets/images/services-icon/03.png')}}" alt=""></div>
-                                        <h5 class="font-16 text-uppercase mt-0 text-white-50">Available Status</h5>
-                                        <h4 class="font-500">{{(App\Status::all()->count())}}<i class="mdi mdi-arrow-up text-success ml-2"></i>
+                                        <h5 class="font-16 text-uppercase mt-0 text-white-50">Contact Messages</h5>
+                                        <h4 class="font-500">{{(App\Contactus::all()->count())}}<i class="mdi mdi-arrow-up text-success ml-2"></i>
                                         </h4>
                                         <!-- <div class="mini-stat-label bg-info">
                                             <p class="mb-0">00%</p>

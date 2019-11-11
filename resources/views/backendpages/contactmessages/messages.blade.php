@@ -36,7 +36,7 @@ Status Name
                                                     <td>{{ $contactus->email }}</td>
                                                     <td>{{ $contactus->phno }}</td>
                                                     <td>{{ $contactus->subject }}</td>
-                                                    <td>{{ $contactus->message }}</td>
+                                                    <td>{{ Str::limit($contactus->message,15) }}</td>
                                                     <td>{{ $contactus->created_at }}</td>
                                                     <td>{{ $contactus->updated_at }}</td>
                                                     <td> 

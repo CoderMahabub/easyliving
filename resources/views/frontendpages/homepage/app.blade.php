@@ -95,7 +95,7 @@
 <!-- Banner and Content Area using Yield-->
 @yield('banner')
 @yield('content')
-
+@include('sweetalert::alert')
 
 
 

@@ -19,15 +19,13 @@ Total Reservations
                                                     <th>ID</th>
                                                     <th>SERVICE NAME</th>
                                                     <th>SUB-SERVICE</th>
-                                                    <th>DELEVERY DATE</th>
-                                                    <th>DELEVERY TIME</th>
-                                                    <th>NAME</th>
-                                                    <th>PHOTO</th>
-                                                    <th>EMAIL</th>
-                                                    <th>PASSWORD</th>
+                                                    <th>DELEVERY DATE & Time</th>
+                                                    <th>CUSTOMER NAME</th>
+                                                    <th>PHONE NUMBER</th>
+                                                    <th>EMAIL ADDRESS</th>
                                                     <th>DELEVERY ADDRESS</th>
-                                                    <th>CREATED</th>
-                                                    <th>UPDATED</th>
+                                                    <th>CREATED AT</th>
+                                                    <th>UPDATED AT</th>
                                                     <th>ACTION</th>
                                                 </tr>
                                             </thead>
@@ -37,13 +35,11 @@ Total Reservations
                                                     <th scope="row">{{ $reservation->id }}</th>
                                                     <td>{{ $reservation->service }}</td>
                                                     <td>{{ $reservation->sub_service }}</td>
-                                                    <td>{{ $reservation->service_date }}</td>
-                                                    <td>{{ $reservation->service_time }}</td>
+                                                    <td>{{ $reservation->service_date }} at {{ $reservation->service_time }}</td>
                                                     <td>{{ $reservation->client_name }}</td>
                                                     <td>{{ $reservation->client_phone }}</td>
-                                                    <td>{{ $reservation->client_email }}</td>
-                                                    <td>{{ $reservation->password }}</td>
-                                                    <td>{{ $reservation->client_address }}</td>
+                                                    <td>{{ Str::limit($reservation->client_email,8) }}</td>
+                                                    <td>{{ Str::limit( $reservation->client_address,10)}}</td>
                                                     <td>{{ $reservation->created_at }}</td>
                                                     <td>{{ $reservation->updated_at }}</td>
                                                     <td> 
