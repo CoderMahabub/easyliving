@@ -17,18 +17,18 @@ Total Reservations
                                             <thead>
                                                 <tr>
                                                     <th>ID</th>
-                                                    <th>Service Name</th>
-                                                    <th>Sub Service</th>
-                                                    <th>Service Date</th>
-                                                    <th>Service TIme</th>
-                                                    <th>CLient Name</th>
-                                                    <th>Clint Phone</th>
-                                                    <th>Client Email</th>
-                                                    <th>Password</th>
-                                                    <th>Client Address</th>
-                                                    <th>Created at</th>
-                                                    <th>Updated at</th>
-                                                    <th>Action</th>
+                                                    <th>SERVICE NAME</th>
+                                                    <th>SUB-SERVICE</th>
+                                                    <th>DELEVERY DATE</th>
+                                                    <th>DELEVERY TIME</th>
+                                                    <th>NAME</th>
+                                                    <th>PHOTO</th>
+                                                    <th>EMAIL</th>
+                                                    <th>PASSWORD</th>
+                                                    <th>DELEVERY ADDRESS</th>
+                                                    <th>CREATED</th>
+                                                    <th>UPDATED</th>
+                                                    <th>ACTION</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -46,7 +46,11 @@ Total Reservations
                                                     <td>{{ $reservation->client_address }}</td>
                                                     <td>{{ $reservation->created_at }}</td>
                                                     <td>{{ $reservation->updated_at }}</td>
-                                                    <td><a class="btn btn-danger" href="#">Remove To Trash</a></td>
+                                                    <td> 
+                                                        <a class="btn btn-primary" href="#">View</a>
+                                                        <a class="btn btn-warning" href="#">Edit</a>
+                                                        <a class="btn btn-danger" href="#">Delete</a>
+                                                    </td>
                                                 </tr table-striped>
                                                 @empty
                                                     <td>No Data</td>

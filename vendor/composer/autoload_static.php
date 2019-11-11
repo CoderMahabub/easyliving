@@ -433,6 +433,7 @@ class ComposerStaticInit89941734e2763d8d2744f3790d7fa474
     public static $classMap = array (
         'App\\Aboutus' => __DIR__ . '/../..' . '/app/Aboutus.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\Contactus' => __DIR__ . '/../..' . '/app/Contactus.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\AboutController' => __DIR__ . '/../..' . '/app/Http/Controllers/AboutController.php',
         'App\\Http\\Controllers\\AboutusController' => __DIR__ . '/../..' . '/app/Http/Controllers/AboutusController.php',
@@ -448,7 +449,6 @@ class ComposerStaticInit89941734e2763d8d2744f3790d7fa474
         'App\\Http\\Controllers\\FaqpageController' => __DIR__ . '/../..' . '/app/Http/Controllers/FaqpageController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\HomepageController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomepageController.php',
-        'App\\Http\\Controllers\\OrderController' => __DIR__ . '/../..' . '/app/Http/Controllers/OrderController.php',
         'App\\Http\\Controllers\\ReservationpageController' => __DIR__ . '/../..' . '/app/Http/Controllers/ReservationpageController.php',
         'App\\Http\\Controllers\\RoleController' => __DIR__ . '/../..' . '/app/Http/Controllers/RoleController.php',
         'App\\Http\\Controllers\\ServicedesignpageController' => __DIR__ . '/../..' . '/app/Http/Controllers/ServicedesignpageController.php',
@@ -462,6 +462,7 @@ class ComposerStaticInit89941734e2763d8d2744f3790d7fa474
         'App\\Http\\Controllers\\TeamMemberController' => __DIR__ . '/../..' . '/app/Http/Controllers/TeamMemberController.php',
         'App\\Http\\Controllers\\TeammemberpageController' => __DIR__ . '/../..' . '/app/Http/Controllers/TeammemberpageController.php',
         'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
+        'App\\Http\\Controllers\\reservationController' => __DIR__ . '/../..' . '/app/Http/Controllers/reservationController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',

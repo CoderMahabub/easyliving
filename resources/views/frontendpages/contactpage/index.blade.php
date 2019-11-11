@@ -116,32 +116,33 @@ Contact Us
                     <div class="row">
                     	<div class="col-sm-8">
                         	<h3>Write Us</h3>
-                        	<form>
+                        	<form action="{{ route('contact_create') }}" method="post">
+                            @csrf
                             	<div class="row">
-                                	<div class="col-md-6">
+                                    <div class="col-md-6">
                                     	<div class="form-group">
-                                        	<label>First Name</label>
-                                            <input type="text" name="fname" class="form-control" data-validation="required" />
+                                        	<label>Name</label>
+                                            <input type="text" name="name" class="form-control" data-validation="required"/>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                     	<div class="form-group">
-                                        	<label>Last Name</label>
-                                            <input type="text" name="lname" class="form-control" data-validation="required"/>
+                                        	<label>Email</label>
+                                            <input type="email" name="email" class="form-control" data-validation="email"  data-validation-error-msg="Invalid e-mail address"/>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                	<div class="col-md-6">
-                                    	<div class="form-group">
-                                        	<label>Email</label>
-                                            <input type="text" name="email" class="form-control" data-validation="email"  data-validation-error-msg="Invalid e-mail address"/>
-                                        </div>
-                                    </div>
                                     <div class="col-md-6">
                                     	<div class="form-group">
                                         	<label>Phone Number</label>
                                             <input type="text" name="phno" class="form-control" data-validation="required"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                    	<div class="form-group">
+                                        	<label>Subject</label>
+                                            <input type="text" name="subject" class="form-control" data-validation="required"/>
                                         </div>
                                     </div>
                                 </div>

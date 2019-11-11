@@ -102,7 +102,7 @@ Book Services
                                 <div class="row">
                                 	<div class="col-sm-12">
                                     	<div class="form-group">
-                                        	<textarea class="form-control" name="client_address"  placeholder="Address" ></textarea>
+                                        	<textarea class="form-control" name="client_address"  placeholder="Address Should be in Detail       (Including house#, floor#, road#, sector# to district)" ></textarea>
                                         </div>
                                     </div>
                                 </div>

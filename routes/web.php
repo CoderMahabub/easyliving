@@ -33,7 +33,11 @@ Route::get('/service-solar','ServicesolarpageCotroller@servicesolar')->name('ser
 Route::get('/faq','FaqpageController@index')->name('faqpage');
 
 //contactpage
-Route::get('/contact','ContactpageController@index')->name('contactpage');
+Route::get('/contact','ContactusController@index')->name('contactpage');
+Route::post('/contact/create','ContactusController@create')->name('contact_create');
+
+
+
 
 
 //teampage
@@ -97,8 +101,8 @@ Route::post('/admin/team_member/create','TeamMemberController@create')->name('te
 Route::get('/admin/role','RoleController@index')->name('role_index');
 Route::post('/admin/role/create','RoleController@create')->name('role_create');
 
-
-
+//========CONTACT US VIEW===========
+Route::get('/admin/messages','ContactusController@messages')->name('contact_messages');
 
 
 

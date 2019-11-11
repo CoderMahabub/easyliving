@@ -148,23 +148,23 @@ Design & Build Service
                                     <tbody>
                                         <tr>
                                             <td>Prepare Home Remodeling Ideas</td>
-                                            <td>$600 - $1150</td>
+                                            <td>৳600 - ৳1150</td>
                                         </tr>
                                         <tr>
                                             <td>Specify Materials</td>
-                                            <td>$250 - $350</td>
+                                            <td>৳250 - ৳350</td>
                                         </tr>
                                         <tr>
                                             <td>Paint Rooms</td>
-                                            <td>$2.50 - $3.50 Per Square Feet</td>
+                                            <td>৳2.50 - ৳3.50 Per Square Feet</td>
                                         </tr>
                                         <tr>
                                             <td>Install Interior Door</td>
-                                            <td>$150 - $350 Per Door</td>
+                                            <td>৳150 - ৳350 Per Door</td>
                                         </tr>
                                         <tr>
                                             <td>Install Light Switch</td>
-                                            <td>$100</td>
+                                            <td>৳100</td>
                                         </tr>
                                     </tbody>
                                 </table>

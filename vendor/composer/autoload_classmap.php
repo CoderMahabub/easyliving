@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Aboutus' => $baseDir . '/app/Aboutus.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
+    'App\\Contactus' => $baseDir . '/app/Contactus.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\AboutController' => $baseDir . '/app/Http/Controllers/AboutController.php',
     'App\\Http\\Controllers\\AboutusController' => $baseDir . '/app/Http/Controllers/AboutusController.php',
@@ -23,7 +24,6 @@ return array(
     'App\\Http\\Controllers\\FaqpageController' => $baseDir . '/app/Http/Controllers/FaqpageController.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
     'App\\Http\\Controllers\\HomepageController' => $baseDir . '/app/Http/Controllers/HomepageController.php',
-    'App\\Http\\Controllers\\OrderController' => $baseDir . '/app/Http/Controllers/OrderController.php',
     'App\\Http\\Controllers\\ReservationpageController' => $baseDir . '/app/Http/Controllers/ReservationpageController.php',
     'App\\Http\\Controllers\\RoleController' => $baseDir . '/app/Http/Controllers/RoleController.php',
     'App\\Http\\Controllers\\ServicedesignpageController' => $baseDir . '/app/Http/Controllers/ServicedesignpageController.php',
@@ -37,6 +37,7 @@ return array(
     'App\\Http\\Controllers\\TeamMemberController' => $baseDir . '/app/Http/Controllers/TeamMemberController.php',
     'App\\Http\\Controllers\\TeammemberpageController' => $baseDir . '/app/Http/Controllers/TeammemberpageController.php',
     'App\\Http\\Controllers\\UserController' => $baseDir . '/app/Http/Controllers/UserController.php',
+    'App\\Http\\Controllers\\reservationController' => $baseDir . '/app/Http/Controllers/reservationController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
     'App\\Http\\Middleware\\CheckForMaintenanceMode' => $baseDir . '/app/Http/Middleware/CheckForMaintenanceMode.php',
