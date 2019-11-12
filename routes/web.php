@@ -74,8 +74,18 @@ Route::get('/admin/dashboard','DashboardController@index')->name('dashboard');
 //user
 Route::get('/admin/user','UserController@index')->name('user');
 
-//reservationView
+
+
+//========RESERVATION EDIT===========
 Route::get('/admin/reservation','reservationController@reservation')->name('reservation_view');
+Route::get('/admin/reservation/edit/{reservation_id}','reservationController@edit')->name('reservation_edit');
+Route::post('/admin/reservation/update','reservationController@update')->name('reservation_update');
+Route::get('/admin/reservation/delete/{reservation_id}','reservationController@delete')->name('reservation_delete');
+
+
+
+
+
 
 
 //========ABOUT US===========

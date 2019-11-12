@@ -3,8 +3,7 @@
 Total Reservations
 @endsection
 @section('content')
-
-            <div class="container">
+<div class="container">
                 <!-- end row -->
                     <div class="row">
                         <div class="col-lg-12">
@@ -43,21 +42,21 @@ Total Reservations
                                                     <td>{{ $reservation->created_at }}</td>
                                                     <td>{{ $reservation->updated_at }}</td>
                                                     <td> 
-                                                        <a class="btn btn-primary" href="#">View</a>
-                                                        <a class="btn btn-warning" href="#">Edit</a>
-                                                        <a class="btn btn-danger" href="#">Delete</a>
+                                                        <a class="btn btn-warning" href="{{ url('/admin/reservation/edit') }}/{{ $reservation->id }}">Edit</a>
+                                                        <a class="btn btn-danger" href="{{ url('/admin/reservation/delete') }}/{{ $reservation->id }}">Soft Delete</a>
                                                     </td>
                                                 </tr table-striped>
                                                 @empty
                                                     <td>No Data</td>
                                                 @endforelse
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    {{ $reservations->links() }}
+                                        </tbody>
+                                    </table>
                                 </div>
+                            {{ $reservations->links() }}
                             </div>
                         </div>
-                        </div>
+                    </div>
+                </div>
 
-            @endsection
+@endsection
+            
