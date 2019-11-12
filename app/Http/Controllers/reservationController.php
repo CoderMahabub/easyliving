@@ -10,7 +10,8 @@ class reservationController extends Controller
 {
     function reservation(){
         $reservations =Reservation::latest()->paginate(5);
-        return view('backendpages.reservationView.reservation',compact('reservations'));
+        $deleted_reservations = Reservation::onlyTrashed()->paginate(3);
+        return view('backendpages.reservationView.reservation',compact('reservations','deleted_reservations'));
     }
     function edit($reservation_id){
         $single_reservation = Reservation::find($reservation_id);
@@ -28,11 +29,16 @@ class reservationController extends Controller
             'password'=>$request->password,
             'client_address'=>$request->client_address,
         ]);
-        return back();
+        return view('backendpages.reservationView.reservation');
     }
     function delete($reservation_id){
         Reservation::find($reservation_id)->delete();
         return back();
+    }
+    
+    function restore(){
+       $deleted_reservations = Reservation::onlyTrashed();
+       return view('backendpages.reservationView.reservation');
     }
 
 

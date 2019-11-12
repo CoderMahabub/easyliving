@@ -58,5 +58,64 @@ Total Reservations
                     </div>
                 </div>
 
+
+
+
+
+
+
+                <div class="container">
+                <!-- end row -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="mt-0 header-title">Deleted Reservation</h4>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-striped table-dark mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>SERVICE NAME</th>
+                                                    <th>SUB-SERVICE</th>
+                                                    <th>DELEVERY DATE & Time</th>
+                                                    <th>CUSTOMER NAME</th>
+                                                    <th>PHONE NUMBER</th>
+                                                    <th>EMAIL ADDRESS</th>
+                                                    <th>DELEVERY ADDRESS</th>
+                                                    <th>CREATED AT</th>
+                                                    <th>UPDATED AT</th>
+                                                    <th>ACTION</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            @forelse($deleted_reservations as $deleted_reservation)
+                                                <tr>
+                                                    <th scope="row">{{ $deleted_reservation->id }}</th>
+                                                    <td>{{ $deleted_reservation->service }}</td>
+                                                    <td>{{ $deleted_reservation->sub_service }}</td>
+                                                    <td>{{ $deleted_reservation->service_date }} at {{ $deleted_reservation->service_time }}</td>
+                                                    <td>{{ $deleted_reservation->client_name }}</td>
+                                                    <td>{{ $deleted_reservation->client_phone }}</td>
+                                                    <td>{{ Str::limit($deleted_reservation->client_email,8) }}</td>
+                                                    <td>{{ Str::limit( $deleted_reservation->client_address,10)}}</td>
+                                                    <td>{{ $deleted_reservation->created_at }}</td>
+                                                    <td>{{ $deleted_reservation->updated_at }}</td>
+                                                    <td> 
+                                                        <a class="btn btn-success" href="{{ url('/admin/reservation/restore') }}/{{ $deleted_reservation->id}}">Restore</a>
+                                                    </td>
+                                                </tr table-striped>
+                                                @empty
+                                                <td>No Data</td>
+                                               @endforelse
+                                        </tbody>
+                                    </table>
+                                </div>
+                            {{ $deleted_reservations->links() }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 @endsection
             

@@ -81,6 +81,7 @@ Route::get('/admin/reservation','reservationController@reservation')->name('rese
 Route::get('/admin/reservation/edit/{reservation_id}','reservationController@edit')->name('reservation_edit');
 Route::post('/admin/reservation/update','reservationController@update')->name('reservation_update');
 Route::get('/admin/reservation/delete/{reservation_id}','reservationController@delete')->name('reservation_delete');
+Route::get('/admin/reservation/restore/{reservation_id}','reservationController@restore')->name('reservation_restore');
 
 
 

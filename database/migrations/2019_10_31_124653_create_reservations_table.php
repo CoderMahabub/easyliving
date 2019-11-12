@@ -24,6 +24,7 @@ class CreateReservationsTable extends Migration
             $table->string('client_email');
             $table->string('password');
             $table->string('client_address');
+            $table->softDeletes();
             $table->timestamps();
 
 

@@ -3,9 +3,11 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Reservation extends Model
 {
+    use SoftDeletes;
     protected $fillable=[
             'service',
             'sub_service',
@@ -17,4 +19,5 @@ class Reservation extends Model
             'password',
             'client_address',
     ];
+    
 }
