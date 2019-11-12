@@ -33,12 +33,14 @@ class reservationController extends Controller
     }
     function delete($reservation_id){
         Reservation::find($reservation_id)->delete();
+        Alert::toast('Delete to Trash Successfully','success');
         return back();
     }
     
-    function restore(){
-       $deleted_reservations = Reservation::onlyTrashed();
-       return view('backendpages.reservationView.reservation');
+    function restore($reservation_id){
+        Reservation::onlyTrashed()->where('id',$reservation_id)->restore();
+        Alert::toast('Restore Reservation Successfully','success');
+        return back();
     }
 
 
