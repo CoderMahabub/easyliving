@@ -128,9 +128,10 @@ Route::get('/admin/add-price','PricelistController@index')->name('add_price');
 Route::post('/admin/service-price/create','PricelistController@create')->name('price_create');
 //======== ADD PRICE EDIT ===========
 Route::get('/admin/service-price/edit/{price_id}','PricelistController@edit')->name('price_edit');
-
-
-
+//======== ADD PRICE UPDATE ===========
+Route::post('/admin/service-price/update','PricelistController@update')->name('price_update');
+//======== ADD PRICE DELETE ===========
+Route::get('/admin/service-price/delete/{price_id}','PricelistController@delete')->name('price_delete');
 
 
 

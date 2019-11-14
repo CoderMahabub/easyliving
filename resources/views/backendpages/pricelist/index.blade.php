@@ -81,7 +81,7 @@ Service Price List
                                                     <td>{{ $price_list->updated_at }}</td>
                                                     <td> 
                                                         <a class="btn btn-warning" href="{{ url('/admin/service-price/edit') }}/{{ $price_list->id }}"> Edit </a>
-                                                        <a class="btn btn-danger" href="#"> Delete </a>
+                                                        <a class="btn btn-danger" href="{{ url('/admin/service-price/delete') }}/{{ $price_list->id }}"> Delete </a>
                                                     </td>
                                                 </trle-striped>
                                                 @endforeach

@@ -60,7 +60,7 @@
                             class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#"
                             role="button" aria-haspopup="false" aria-expanded="false"><i
                                 class="mdi mdi-bell-outline noti-icon"></i> <span
-                                class="badge badge-pill badge-danger noti-icon-badge">3</span></a>
+                                class="badge badge-pill badge-danger noti-icon-badge">{{(App\Reservation::all()->count())}}</span></a>
                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">
                             <!-- item-->
                             <h6 class="dropdown-item-text">Notifications (258)</h6>
@@ -153,6 +153,7 @@
                         <li><a href="{{route('status_index')}}" class="waves-effect"><i class="ti-alarm-clock"></i><span>Add Status</span></a></li>
                         <li><a href="{{route('team_member')}}" class="waves-effect"><i class="ti-id-badge"></i><span>Add Team Member</span></a></li>
                         <li><a href="{{route('role_index')}}" class="waves-effect"><i class="ti-id-badge"></i><span>Add User Role</span></a></li>
+                        <li><a href="{{route('add_price')}}" class="waves-effect"><i class="ti-id-clock"></i><span>Add Price List</span></a></li>
                         <li><a href="{{route('about_us')}}" class="waves-effect"><i class="ti-book"></i><span>Add AboutUs</span></a></li>
                         
                             </ul>
