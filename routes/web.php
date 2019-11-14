@@ -117,6 +117,29 @@ Route::get('/admin/messages','ContactusController@messages')->name('contact_mess
 
 
 
+
+
+
+
+
+//======== ADD PRICE FORM ===========
+Route::get('/admin/add-price','PricelistController@index')->name('add_price');
+//======== ADD PRICE CREATE ===========
+Route::post('/admin/service-price/create','PricelistController@create')->name('price_create');
+//======== ADD PRICE EDIT ===========
+Route::get('/admin/service-price/edit/{price_id}','PricelistController@edit')->name('price_edit');
+
+
+
+
+
+
+
+
+
+
+
+
 //.........................................
 //Previous HomePage
 

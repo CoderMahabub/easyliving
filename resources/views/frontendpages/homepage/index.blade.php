@@ -127,10 +127,10 @@
                                     	<div class="col-sm-4">
                                         	<select class="selectpicker">
                                                 <option>Select City</option>
-                                                <option>Berlin</option>
-                                                <option>Frankfurt</option>
-                                                <option>Hamburg</option>
-                                                <option>Hanover</option>
+                                                <option>Dhaka</option>
+                                                <option>Uttara</option>
+                                                <option>Mirpur</option>
+                                                <option>Gulshan</option>
                                             </select>
                                         </div>
                                         <div class="col-sm-8">

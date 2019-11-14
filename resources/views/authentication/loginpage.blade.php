@@ -17,16 +17,20 @@
 </head>
 
 <body>
-    <div class="home-btn d-none d-sm-block"><a href="{{ route('homepage') }}" class="text-dark"><b>Goto Homepag </b> <i class="fas fa-home h2"></i></a></div>
+    <div class="home-btn d-none d-sm-block"><a href="{{ route('homepage') }}" class="text-dark"><b>Goto Homepage </b> <i class="fas fa-home h2"></i></a></div>
     <div class="wrapper-page">
         <div class="card overflow-hidden account-card mx-3">
             <div class="bg-primary p-4 text-white text-center position-relative">
                 <h4 class="font-20 m-b-5">Welcome Back !</h4>
                 <p class="text-white-50 mb-4">Sign in to continue to EasyLiving Services.</p>
-                <a href="{{ route('homepage') }}" class="logo logo-admin"><img src="{{ asset('backend/assets/images/logo-sm.png') }}" height="24" alt="logo"></a>
+                <a href="{{ route('homepage') }}" class="logo logo-admin"><img src="{{ asset('frontend/assets/images/favicon.ico') }}" height="24" alt="logo"></a>
             </div>
             <div class="account-card-content">
-
+                    <div class="form-group row mb-0">
+                        <div class="col-md-8 offset-md-2">
+                            <p>Don't have an account ? <a href="{{ route('customer_registration') }}" class="font-500 text-primary">Register now</a></p>
+                        </div>
+                    </div>
             @if ($errors->any())
                     <ul>
                     @foreach ($errors->all() as $error)
@@ -93,10 +97,11 @@
                             </div>
                         </div>
                     </form>
+                    <br>
+                    
             </div>
         </div>
         <div class="m-t-40 text-center">
-            <p>Don't have an account ? <a href="{{ route('customer_registration') }}" class="font-500 text-primary">Register now</a></p>
             <p>© 2019 EsayLiving Service</p>
         </div>
     </div>

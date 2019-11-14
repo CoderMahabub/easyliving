@@ -27,12 +27,12 @@
 
 <body>
 <div class="container">
-<div class="home-btn d-none d-sm-block"><a href="{{ route('homepage') }}" class="text-dark"> <b>Goto Homepage </b><i class="fas fa-home h2"></i></a></div>    <!-- Begin page -->
+<div class="home-btn d-none d-sm-block"><a href="{{ route('homepage') }}" class="text-dark"> <b>Goto Homepage </b><i class="fa fa-home h2"></i></a></div>    <!-- Begin page -->
     <div class="row">
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
-                    <h3 class="text-center"><a href="{{ route('customer_registration') }}" class="logo"><img src="{{ asset('frontend/assets/images/favicon.ico') }}" height="25" alt="logo"></a></h3>
+                    <h3 class="text-center"><a href="{{ route('homepage') }}" class="logo"><img src="{{ asset('frontend/assets/images/favicon.ico') }}" height="25" alt="logo"></a></h3>
                     <div>
                     <!-- //alert message -->
 

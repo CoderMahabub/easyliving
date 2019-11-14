@@ -26,7 +26,7 @@ class StatusController extends Controller
     function edit($status_id){
         $single_status = Status::find($status_id);
         return view('backendpages.status.edit',compact('single_status'));
-    }
+    } 
 
 
     function update(Request $request){

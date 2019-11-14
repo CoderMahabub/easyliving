@@ -73,13 +73,7 @@
                                         <li><a href="{{route('reservation')}}">Reservation</a></li>
                                         <li><a href="{{route('contactpage')}}">Contact</a></li>
                                         <li><a href="{{route('faqpage')}}">FAQ’s</a></li>                                        
-                                        <li><a href="#">LogIn/Register<em class="fa fa-angle-down" aria-hidden="true"></em></a>
-                                        	<ul class="dropdown-menu"> 
-                                                <li><a href="{{route('customer_login')}}">LogIn</a></li>
-                                            	<li><a href="{{route('customer_registration')}}">Register</a></li>
-                                            </ul> 
-                                        </li>
-                                         
+                                        <li><a href="{{route('customer_login')}}">LogIn</a></li>                                       
                                     </ul>
                                 </div>
                             </nav> 
