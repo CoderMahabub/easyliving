@@ -74,7 +74,7 @@ Add New Role
                                                     <td>{{ $role->updated_at }}</td>
                                                     <td> <a class="btn btn-warning"href="#">Delete</a></td>
                                                 </tr>
-                                                @endforeach
+                                            @endforeach
 
                                             </tbody>
                                         </table>

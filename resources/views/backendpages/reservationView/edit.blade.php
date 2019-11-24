@@ -1,12 +1,12 @@
 @extends('frontendpages.homepage.app')
 
 @section('title')
-Booking Eidt
+Update Booking
 @endsection
 
 @section('content')
 
- <!-- Register Section -->
+  <!-- Register Section -->
  <section class="service-detail-wrapper">
             	<div class="container">
                 
@@ -32,7 +32,7 @@ Booking Eidt
                             <div class="row">
                                 	<div class="col-sm-6">
                                     	<div class="form-group">
-                                        	<select class="selectpicker" name="service" ">
+                                        	<select class="selectpicker" name="service">
                                                 <option>{{ $single_reservation->service }}</option>
                                                 <option>Electrical</option>
                                                 <option>Security</option>
@@ -50,7 +50,7 @@ Booking Eidt
                                     </div>
                                     <div class="col-sm-6">
                                     	<div class="form-group">
-                                        	<select class="selectpicker" name="sub_service"  ">
+                                        	<select class="selectpicker" name="sub_service">
                                                 <option>{{ $single_reservation->sub_service }}</option>
                                                 <option>Installation, Repair or Replacement:</option>
                                                 <option>Drain Cleaning and Sewers</option>
@@ -77,27 +77,24 @@ Booking Eidt
                             	<div class="row">
                                 	<div class="col-sm-6">
                                     	<div class="form-group">
-                                        	<input type="text" class="form-control" name="client_name" placeholder="Client Name" value="{{ $single_reservation->client_name }}" />
-                                        </div>
-                                    	<div class="form-group">
-                                        	<input type="hidden" class="form-control" name="reservation_id"  value="{{ $single_reservation->id}}" />
+                                        	<input type="text" class="form-control" name="first_name" placeholder="First Name" value="{{ $single_reservation->first_name }}"/>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                     	<div class="form-group">
-                                        	<input type="text" class="form-control" name="client_phone" placeholder="Mobile Number" value="{{$single_reservation->client_phone}}"/>
+                                        	<input type="text" class="form-control" name="last_name" placeholder="Last Name" Value="{{ $single_reservation->last_name }}"/>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                 	<div class="col-sm-6">
                                     	<div class="form-group">
-                                        	<input type="email" class="form-control" name="client_email" placeholder="Email" value="{{ $single_reservation->client_email }}" />
+                                        	<input type="email" class="form-control" name="client_email" value="{{ $single_reservation->client_email }}" />
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                     	<div class="form-group">
-                                        	<input type="password" class="form-control" name="password" placeholder="Password" value="{{ $single_reservation->password }}" />
+                                        	<input type="text" class="form-control" name="phone_number" value="{{ $single_reservation->phone_number }}"/>
                                         </div>
                                     </div>
                                 </div>
@@ -105,7 +102,19 @@ Booking Eidt
                                 <div class="row">
                                 	<div class="col-sm-12">
                                     	<div class="form-group">
-                                        	<textarea class="form-control" name="client_address"  value="{{ $single_reservation->client_address }}"></textarea>
+                                        	<input type="text" class="form-control" name="client_address" value="{{ $single_reservation->client_address }}" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                	<div class="col-sm-6">
+                                    	<div class="form-group">
+                                        	<input type="text" class="form-control" name="client_sub_district" value="{{ $single_reservation->client_sub_district }}" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                    	<div class="form-group">
+                                        	<input type="text" class="form-control" name="client_district" value="{{ $single_reservation->client_district }}"/>
                                         </div>
                                     </div>
                                 </div>
@@ -113,7 +122,7 @@ Booking Eidt
 
                                 <div class="form-group text-center">
                                 	<div class="group-btn">
-                                    	<input type="submit" value="UPDATE" class="btn btn-info">
+                                    	<input type="submit" value="Update" class="btn btn-info">
                                     </div>
                                 </div>
                                 
@@ -121,10 +130,7 @@ Booking Eidt
                         </div>
                     </div>
                 </div>
-            </section> 
-
-
-        
+            </section>       
         <!-- Banner Section -->
         @extends ('frontendpages.homepage.banner')
         @section('banner-title')

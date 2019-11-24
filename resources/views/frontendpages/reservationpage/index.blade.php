@@ -77,12 +77,12 @@ Book Services
                             	<div class="row">
                                 	<div class="col-sm-6">
                                     	<div class="form-group">
-                                        	<input type="text" class="form-control" name="client_name" placeholder="Your Name" />
+                                        	<input type="text" class="form-control" name="first_name" placeholder="First Name" />
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                     	<div class="form-group">
-                                        	<input type="text" class="form-control" name="client_phone" placeholder="Mobile Number"/>
+                                        	<input type="text" class="form-control" name="last_name" placeholder="Last Name"/>
                                         </div>
                                     </div>
                                 </div>
@@ -94,7 +94,7 @@ Book Services
                                     </div>
                                     <div class="col-sm-6">
                                     	<div class="form-group">
-                                        	<input type="password" class="form-control" name="password" placeholder="Password"/>
+                                        	<input type="text" class="form-control" name="phone_number" placeholder="Phone Number"/>
                                         </div>
                                     </div>
                                 </div>
@@ -102,7 +102,19 @@ Book Services
                                 <div class="row">
                                 	<div class="col-sm-12">
                                     	<div class="form-group">
-                                        	<textarea class="form-control" name="client_address"  placeholder="Address Should be in Detail       (Including house#, floor#, road#, sector# to district)" ></textarea>
+                                        	<input type="text" class="form-control" name="client_address" placeholder="Address" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                	<div class="col-sm-6">
+                                    	<div class="form-group">
+                                        	<input type="text" class="form-control" name="client_sub_district" placeholder="Sub-District" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                    	<div class="form-group">
+                                        	<input type="text" class="form-control" name="client_district" placeholder="District"/>
                                         </div>
                                     </div>
                                 </div>

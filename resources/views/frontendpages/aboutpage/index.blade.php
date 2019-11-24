@@ -92,14 +92,12 @@ About Us
 
 
 
-
-
-        @extends ('frontendpages.homepage.banner')
-        @section('banner-title')
-        About Us
-        @endsection
-
-
+<!-- BANNER PART STATS HERE -->
+    @extends ('frontendpages.homepage.banner')
+    @section('banner-title')
+    About Us
+    @endsection
+ <!-- BANNER PART ENDS HERE -->
         
         
         <!-- Content Start -->
@@ -187,5 +185,4 @@ About Us
                 </div>
             </section>
       	</div>
-
 @endsection

@@ -19,11 +19,13 @@ class CreateReservationsTable extends Migration
             $table->string('sub_service');
             $table->string('service_date');
             $table->string('service_time');
-            $table->string('client_name');
-            $table->string('client_phone');
+            $table->string('first_name');
+            $table->string('last_name');
             $table->string('client_email');
-            $table->string('password');
+            $table->string('phone_number');
             $table->string('client_address');
+            $table->string('client_sub_district');
+            $table->string('client_district');
             $table->softDeletes();
             $table->timestamps();
 

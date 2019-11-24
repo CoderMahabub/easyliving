@@ -18,17 +18,19 @@ class reservationController extends Controller
         return view('backendpages.reservationView.edit',compact('single_reservation'));
     }
     function update(Request $request){
-        Reservation::find($request->reservation_id)->update([
+            Reservation::find($request->reservation_id)->update([
             'service'=>$request->service,
             'sub_service'=>$request->sub_service,
             'service_date'=>$request->service_date,
             'service_time'=>$request->service_time,
-            'client_name'=>$request->client_name,
-            'client_phone'=>$request->client_phone,
+            'first_name'=>$request->first_name,
+            'last_name'=>$request->last_name,
+            'phone_number'=>$request->phone_number,
             'client_email'=>$request->client_email,
-            'password'=>$request->password,
-            'client_address'=>$request->client_address,
-        ]);
+            'client_address'=>$request->client_address,            
+            'client_sub_district'=>$request->client_sub_district,            
+            'client_district'=>$request->client_district,
+            ]);
         return view('backendpages.reservationView.reservation');
     }
     function delete($reservation_id){

@@ -271,8 +271,8 @@
                                     <div class="row-height">
                                         <div class="col-sm-height icon"><span><i class="fa fa-phone" aria-hidden="true"></i></span></div>
                                         <div class="col-sm-height call-us">
-                                            <span class="text">Call us toll free:</span>
-                                            <span class="num">1 800 123 4567</span>
+                                            <span class="text">Call Us To Discuss:</span>
+                                            <span class="num">+880 1737766950</span>
                                         </div>
                                     </div>
                                 </div>
@@ -292,22 +292,22 @@
                     	<div class="col-md-3 col-sm-6">
                         	<div class="icon"><i class="fa fa-search" aria-hidden="true"></i></div>
                         	<div class="name">Browse Services</div>
-                            <p>Lorem Ipsum is simply dummy text the printing and typesetting industry. </p> 
+                            <p>You have to visit website and then go to reservation tab to place order. </p> 
                         </div>
                         <div class="col-md-3 col-sm-6">
                         	<div class="icon"><i class="fa fa-calendar-check-o" aria-hidden="true"></i></div>
                         	<div class="name">Schedule Service</div>
-                            <p>Lorem Ipsum is simply dummy text the printing and typesetting industry. </p>
+                            <p>Fill out all the fields to provide Schedule in detail with time and date. </p>
                         </div>
                         <div class="col-md-3 col-sm-6">
                         	<div class="icon"><i class="fa fa-list-alt" aria-hidden="true"></i></div>
                         	<div class="name">Book Service</div>
-                            <p>Lorem Ipsum is simply dummy text the printing and typesetting industry. </p>
+                            <p>After filling out all the fields just click on book service to book your service. </p>
                         </div>
                         <div class="col-md-3 col-sm-6">
                         	<div class="icon"><i class="fa fa-gear" aria-hidden="true"></i></div>
                         	<div class="name">Resolves Issues</div>
-                            <p>Lorem Ipsum is simply dummy text the printing and typesetting industry. </p>
+                            <p>If there is any issue with which you are not satisfied then resolve it by us. </p>
                         </div>
                     </div>
                 </div>
@@ -348,38 +348,6 @@
                     </div>
                 </div>
             </section>
-                    	<!-- Our Customers Section -->
-                        <section id="our-customers" class="section-block">
-            	<div class="container">
-                	<div class="top-desc">
-                        <h2>Our Happy Customers</h2>
-                        <p class="sub-heading">You’re in the right place!</p>
-                    </div>
-                    <div class="row">
-                    	<div class="col-md-3 col-sm-6">
-                            <div class="img"><img src="{{asset('frontend/assets/images/customers-img/cust-img1.jpg')}}" alt="" /></div>
-                            <div class="name">Pick a Services</div>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industry's standard  text specimen book.</p>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="img"><img src="{{asset('frontend/assets/images/customers-img/cust-img2.jpg')}}" alt="" /></div>
-                            <div class="name">Pick a Services</div>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industry's standard  text specimen book.</p>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="img"><img src="{{asset('frontend/assets/images/customers-img/cust-img3.jpg')}}" alt="" /></div>
-                            <div class="name">Pick a Services</div>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industry's standard  text specimen book.</p>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="img"><img src="{{asset('frontend/assets/images/customers-img/cust-img4.jpg')}}" alt="" /></div>
-                            <div class="name">Pick a Services</div>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industry's standard  text specimen book.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
       	</div>
         
     @endsection

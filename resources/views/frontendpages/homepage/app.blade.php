@@ -14,32 +14,20 @@
     <!-- favicon icon -->
     <link rel="icon" href="{{ asset('frontend/assets/images/favicon.ico')}}">
     
-    <!-- Icons -->
+
     <!-- Icons -->
     <link href="{{ asset('frontend/assets/css/font-awesome.min.css')}}" rel="stylesheet"><!-- font-awesome.min css -->
     <link href="{{ asset('frontend/assets/css/custom-icons.css')}}" rel="stylesheet"><!-- custom-icons css -->
-
+    <!-- Icons -->
 
     <!-- CSS Stylesheet -->
     <link href="{{ asset('frontend/assets/css/bootstrap.css') }}" rel="stylesheet"><!-- bootstrap.min css -->
     <link href="{{ asset('frontend/assets/css/slick.css')}}" rel="stylesheet"><!-- slick css -->
     <link href="{{ asset('frontend/assets/css/slick-theme.css') }}" rel="stylesheet"><!-- slick-theme css -->
     <link href="{{ asset('frontend/assets/css/bootstrap-select.css') }}" rel="stylesheet"><!-- bootstrap selectbox css -->
-    
     <link href="{{ asset('frontend/assets/css/style.css') }}" rel="stylesheet"><!-- style css --> 
 	<link href="{{ asset('frontend/assets/css/css3.css') }}" rel="stylesheet">
 	<link href="{{ asset('frontend/assets/css/theme/theme-1.css') }}" rel="stylesheet" id="switch_style">
-    <!-- style css --> 
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-	<!--[if gte IE 9]>
-		<style type="text/css">
-			.thumb-hover,
-			.contact{filter: none;}
-		</style>
-	<![endif]-->
 </head> 
 
 <body>
@@ -90,15 +78,6 @@
 @yield('banner')
 @yield('content')
 @include('sweetalert::alert')
-
-
-
-
-
-
-
-
-
 
         <!-- Footer Start -->
         <footer id="footer">
@@ -213,5 +192,4 @@
         @include('sweetalert::alert')
     </script>
 </body>
-
 </html>
