@@ -126,7 +126,7 @@
                                 	<div class="row">
                                     	<div class="col-sm-4">
                                         	<select class="selectpicker">
-                                                <option>Select City</option>
+                                                <option>Available City</option>
                                                 <option>Dhaka</option>
                                                 <option>Uttara</option>
                                                 <option>Mirpur</option>
@@ -137,7 +137,7 @@
                                         	<div class="service-list">
                                                 <form name="myform" id="myform"  action="http://design.dev.drcsystems.ooo:8084/themeforest/easyliving/getvalue.php" enctype="multipart/form-data" method="post">
                                                     <select class="mydds" name="myimge">
-                                                        <option value="" selected="selected" title="">What service do you need?</option>
+                                                        <option value="" selected="selected" title="">Availabel Services</option>
                                                         <option value="electrical" title="icon icon-electrical" class="service1">Electrical</option>
                                                         <option value="security" title="icon icon-home">Home Security</option>
                                                         <option value="pestcontrol" title="icon icon-pestcontrol">Pest Control</option>

@@ -97,7 +97,7 @@
                                         <li><a href="contact-us.html">Contact</a></li>
                                     </ul>
                                 </div>
-                                <div class="col-xs-6">
+                                {{-- <div class="col-xs-6">
                                 	<ul class="links">
                                         <li><a href="#">Terms of Service</a></li>
                                         <li><a href="#">Privacy Policy</a></li>
@@ -105,7 +105,7 @@
                                         <li><a href="#">Download Apps</a></li>
                                         <li><a href="#">Partner With Us</a></li>
                                     </ul>
-                                </div>
+                                </div> --}}
                             </div>
                         </div> 
                         <div class="col-md-4 col-sm-6">
@@ -121,7 +121,7 @@
                                         <li><a href="#">Carpentry</a></li>
                                     </ul>
                                 </div>
-                                <div class="col-xs-6">
+                                {{-- <div class="col-xs-6">
                                 	<ul class="links">
                                         <li><a href="#">Geyser</a></li>
                                         <li><a href="#">Vehicle Care</a></li>
@@ -129,7 +129,7 @@
                                         <li><a href="#">Home Security</a></li>
                                         <li><a href="#">Computer Repair</a></li>
                                     </ul>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-12">
@@ -145,12 +145,11 @@
                                 <li><a href="#"><i aria-hidden="true" class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i aria-hidden="true" class="fa fa-twitter"></i></a></li>
                                 <li><a href="#"><i aria-hidden="true" class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i aria-hidden="true" class="fa fa-pinterest"></i></a></li>
                                 <li><a href="#"><i aria-hidden="true" class="fa fa-youtube"></i></a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="quick-links">
+                    {{-- <div class="quick-links">
                         <ul class="list-inline">
                             <li><a href="{{route('aboutpage') }}">About us</a></li>
                             <li><a href="#">Privacy</a></li>
@@ -159,7 +158,7 @@
                             <li><a href="{{route('contactpage')}}">Contact Us</a></li>
                             <li><a href="blog.html">Blog</a></li>
                         </ul>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <div class="copyright">

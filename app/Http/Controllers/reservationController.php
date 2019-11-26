@@ -27,8 +27,8 @@ class reservationController extends Controller
             'last_name'=>$request->last_name,
             'phone_number'=>$request->phone_number,
             'client_email'=>$request->client_email,
-            'client_address'=>$request->client_address,            
-            'client_sub_district'=>$request->client_sub_district,            
+            'client_address'=>$request->client_address,
+            'client_sub_district'=>$request->client_sub_district,
             'client_district'=>$request->client_district,
             ]);
         return view('backendpages.reservationView.reservation');

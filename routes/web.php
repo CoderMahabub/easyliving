@@ -44,11 +44,9 @@ Route::post('/contact/create','ContactusController@create')->name('contact_creat
 Route::get('/team-member','TeammemberpageController@index')->name('teampage');
 
 
-
 //========RESERVATION===========
 Route::get('/reservation', 'ReservationpageController@index')->name('reservation');
 Route::post('/reservation/create', 'ReservationpageController@create')->name('reservation_create');
-
 
 
 //========CUSTOMER REGISTRATION===========
@@ -82,10 +80,6 @@ Route::get('/admin/reservation/edit/{reservation_id}','reservationController@edi
 Route::post('/admin/reservation/update','reservationController@update')->name('reservation_update');
 Route::get('/admin/reservation/delete/{reservation_id}','reservationController@delete')->name('reservation_delete');
 Route::get('/admin/reservation/restore/{reservation_id}','reservationController@restore')->name('reservation_restore');
-
-
-
-
 
 
 
@@ -135,6 +129,14 @@ Route::get('/admin/service-price/delete/{price_id}','PricelistController@delete'
 
 
 
+
+
+
+//========CUSTOMER DASHBOARD===========
+Route::get('/customer/dashboard','CustomerDashboardController@index')->name('customer_dashboard');
+
+//========EMPLOYEE DASHBOARD===========
+Route::get('/employee/dashboard','EmployeeDashboardController@index')->name('employee_dashboard');
 
 
 
