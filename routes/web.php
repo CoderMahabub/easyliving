@@ -132,6 +132,9 @@ Route::get('/admin/service-price/delete/{price_id}','PricelistController@delete'
 
 
 
+
+
+
 //========CUSTOMER DASHBOARD===========
 Route::get('/customer/dashboard','CustomerDashboardController@index')->name('customer_dashboard');
 

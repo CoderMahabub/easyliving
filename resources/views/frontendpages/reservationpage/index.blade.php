@@ -52,9 +52,9 @@ Book Services
                                     	<div class="form-group">
                                         	<select class="selectpicker" name="sub_service">
                                                 <option>Select Sub Service</option>
-                                                <option>Installation, Repair or Replacement:</option>
-                                                <option>Drain Cleaning and Sewers</option>
-                                                <option>Maintenance, Repair and Care</option>
+                                                @foreach ($pricelists as $pricelist)
+                                                    <option value="{{ $pricelist->id }}">{{ $pricelist->sub_service_name }}</option>
+                                                @endforeach
                                             </select>
                                         </div>
                                     </div>

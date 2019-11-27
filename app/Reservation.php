@@ -19,5 +19,9 @@ class Reservation extends Model
             'password',
             'client_address',
     ];
+
+    function relationBetweenPrice(){
+        return $this->hasOne('App\Pricelist','id','service_price_id');
+    }
     
 }

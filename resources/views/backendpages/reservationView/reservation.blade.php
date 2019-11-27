@@ -18,13 +18,11 @@ Total Reservations
                                                     <th>ID</th>
                                                     <th>SERVICE NAME</th>
                                                     <th>SUB-SERVICE</th>
+                                                    <th>TOTAL PRICE</th>
                                                     <th>DELEVERY DATE & Time</th>
                                                     <th>CUSTOMER NAME</th>
-                                                    <th>PHONE NUMBER</th>
-                                                    <th>EMAIL ADDRESS</th>
+                                                    <th>PHONE & EMAIL</th>
                                                     <th>DELEVERY ADDRESS</th>
-                                                    <th>THANA</th>
-                                                    <th>DISTRICT</th>
                                                     <th>CREATED AT</th>
                                                     <th>UPDATED AT</th>
                                                     <th>ACTION</th>
@@ -35,14 +33,12 @@ Total Reservations
                                                 <tr>
                                                     <th scope="row">{{ $reservation->id }}</th>
                                                     <td>{{ $reservation->service }}</td>
-                                                    <td>{{ $reservation->sub_service }}</td>
+                                                    <td>{{ $reservation->relationBetweenPrice->sub_service_name }}</td>
+                                                    <td>{{ $reservation->relationBetweenPrice->sub_service_price }}</td>
                                                     <td>{{ $reservation->service_date }} at {{ $reservation->service_time }}</td>
                                                     <td>{{ $reservation->first_name }} {{ $reservation->last_name }}</td>
-                                                    <td>{{ $reservation->phone_number }}</td>
-                                                    <td>{{ Str::limit($reservation->client_email,8) }}</td>
-                                                    <td>{{ Str::limit( $reservation->client_address,10)}}</td>
-                                                    <td>{{ Str::limit( $reservation->client_sub_district,10)}}</td>
-                                                    <td>{{ Str::limit( $reservation->client_district,10)}}</td>
+                                                    <td>{{ $reservation->phone_number }}, {{ Str::limit($reservation->client_email,15) }}</td>
+                                                    <td>{{ $reservation->client_address}}, {{ $reservation->client_sub_district}}, {{ Str::limit( $reservation->client_district,10)}}</td>
                                                     <td>{{ $reservation->created_at }}</td>
                                                     <td>{{ $reservation->updated_at }}</td>
                                                     <td> 
@@ -82,13 +78,11 @@ Total Reservations
                                                     <th>ID</th>
                                                     <th>SERVICE NAME</th>
                                                     <th>SUB-SERVICE</th>
+                                                    <th>TOTAL PRICE</th>
                                                     <th>DELEVERY DATE & Time</th>
                                                     <th>CUSTOMER NAME</th>
-                                                    <th>PHONE NUMBER</th>
-                                                    <th>EMAIL ADDRESS</th>
+                                                    <th>PHONE & EMAIL</th>
                                                     <th>DELEVERY ADDRESS</th>
-                                                    <th>THANA</th>
-                                                    <th>DISTRICT</th>
                                                     <th>CREATED AT</th>
                                                     <th>UPDATED AT</th>
                                                     <th>ACTION</th>
@@ -99,14 +93,12 @@ Total Reservations
                                                 <tr>
                                                     <th scope="row">{{ $deleted_reservation->id }}</th>
                                                     <td>{{ $deleted_reservation->service }}</td>
-                                                    <td>{{ $deleted_reservation->sub_service }}</td>
+                                                    <td>{{ $deleted_reservation->relationBetweenPrice->sub_service_name }}</td>
+                                                    <td>{{ $deleted_reservation->relationBetweenPrice->sub_service_price }}</td>
                                                     <td>{{ $deleted_reservation->service_date }} at {{ $deleted_reservation->service_time }}</td>
                                                     <td>{{ $deleted_reservation->first_name }} {{ $deleted_reservation->last_name }}</td>
-                                                    <td>{{ $deleted_reservation->phone_number }}</td>
-                                                    <td>{{ Str::limit($deleted_reservation->client_email,8) }}</td>
-                                                    <td>{{ Str::limit( $deleted_reservation->client_address,10)}}</td>
-                                                    <td>{{ Str::limit( $deleted_reservation->client_sub_district,10)}}</td>
-                                                    <td>{{ Str::limit( $deleted_reservation->client_district,10)}}</td>
+                                                    <td>{{ $deleted_reservation->phone_number }}, {{ Str::limit($deleted_reservation->client_email,15) }}</td>
+                                                    <td>{{ $deleted_reservation->client_address}}, {{ $deleted_reservation->client_sub_district}}, {{ Str::limit( $deleted_reservation->client_district,9)}}</td>
                                                     <td>{{ $deleted_reservation->created_at }}</td>
                                                     <td>{{ $deleted_reservation->updated_at }}</td>
                                                     <td> 

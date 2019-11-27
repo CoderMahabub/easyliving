@@ -90,17 +90,19 @@
                                   <!-- District -->
                                     <div class="col-md-6">
                                         <label>District</label>
-                                        <select class="form-control" name="district" id="district">
+                                        <select class="form-control" name="district">
+                                            <option value="">Select District</option>
                                             <option value="">Dhaka</option>
-                                            <option value="">Khulna</option>
                                         </select>
                                     </div>
                                     <!-- Thana -->
                                     <div class="col-md-6">
                                         <label>Thana</label>
-                                        <select class="form-control" name="thana" id="thana">
-                                            <option value="">Tejgaon</option>
+                                        <select class="form-control" name="thana">
+                                            <option value="">Select Thana</option>
                                             <option value="">Uttara</option>
+                                            <option value="">Mirpur</option>
+                                            <option value="">Gulshan</option>
                                         </select>
                                     </div>
                                 </div>

@@ -122,7 +122,7 @@
                         <li class="menu-title">Main</li>
                         <li><a href="{{route('dashboard')}}" class="waves-effect"><i class="ti-home"></i><span
                                     class="badge badge-primary badge-pill float-right"></span>
-                                <span>Dashboard</span></a></li>
+                                <span>Admin Dashboard</span></a></li>
 
 
 

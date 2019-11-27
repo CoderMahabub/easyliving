@@ -17,6 +17,7 @@ class CreateReservationsTable extends Migration
             $table->bigIncrements('id');
             $table->string('service');
             $table->string('sub_service');
+            $table->integer('service_price_id')->default(1);
             $table->string('service_date');
             $table->string('service_time');
             $table->string('first_name');

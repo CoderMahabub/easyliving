@@ -4,13 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Reservation;
+use App\pricelist;
 use Alert;
 use Carbon\Carbon;
 
 class ReservationpageController extends Controller
 {
     public function index(){
-        return view('frontendpages.reservationpage.index');
+        $pricelists = Pricelist::all();
+        return view('frontendpages.reservationpage.index',compact('pricelists'));
     }
     public function create(Request $request){
         $validatedData = $request->validate([
@@ -29,6 +31,7 @@ class ReservationpageController extends Controller
         Reservation::insert([
             'service'=>$request->service,
             'sub_service'=>$request->sub_service,
+            'service_price_id'=>$request->sub_service,
             'service_date'=>$request->service_date,
             'service_time'=>$request->service_time,
             'first_name'=>$request->first_name,
