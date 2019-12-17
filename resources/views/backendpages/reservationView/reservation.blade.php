@@ -23,6 +23,7 @@ Total Reservations
                                                     <th>CUSTOMER NAME</th>
                                                     <th>PHONE & EMAIL</th>
                                                     <th>DELEVERY ADDRESS</th>
+                                                    <th>STATUS</th>
                                                     <th>CREATED AT</th>
                                                     <th>UPDATED AT</th>
                                                     <th>ACTION</th>
@@ -39,6 +40,7 @@ Total Reservations
                                                     <td>{{ $reservation->first_name }} {{ $reservation->last_name }}</td>
                                                     <td>{{ $reservation->phone_number }}, {{ Str::limit($reservation->client_email,15) }}</td>
                                                     <td>{{ $reservation->client_address}}, {{ $reservation->client_sub_district}}, {{ Str::limit( $reservation->client_district,10)}}</td>
+                                                    <td class="text-info">{{ $reservation->status }}</td>
                                                     <td>{{ $reservation->created_at }}</td>
                                                     <td>{{ $reservation->updated_at }}</td>
                                                     <td> 

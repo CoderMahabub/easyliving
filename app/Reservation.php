@@ -18,6 +18,10 @@ class Reservation extends Model
             'client_email',
             'password',
             'client_address',
+            'status',
+            'employee_id',
+            'district',
+            'thana',
     ];
 
     function relationBetweenPrice(){

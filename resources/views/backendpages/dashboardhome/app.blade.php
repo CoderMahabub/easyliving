@@ -8,8 +8,6 @@
     <title>
         @yield('title')
     </title>
-    <meta content="Admin Dashboard" name="description">
-    <meta content="Themesbrand" name="author">
     <link rel="shortcut icon" href="{{asset('frontend/assets/images/favicon.ico')}}">
     <!--Chartist Chart CSS -->
     <link rel="stylesheet" href="../plugins/chartist/css/chartist.min.css">
@@ -30,13 +28,7 @@
                             height="22"></i></a></div>
             <nav class="navbar-custom">
                 <ul class="navbar-right list-inline float-right mb-0">
-                    <li class="dropdown notification-list list-inline-item d-none d-md-inline-block">
-                        <form role="search" class="app-search">
-                            <div class="form-group mb-0"><input type="text" class="form-control" placeholder="Search..">
-                                <button type="submit"><i class="fa fa-search"></i></button></div>
-                        </form>
-                    </li><!-- language-->
-                    
+                                      
                     <li class="dropdown notification-list list-inline-item d-none d-md-inline-block"><a
                             class="nav-link waves-effect" href="#" id="btn-fullscreen"><i
                                 class="mdi mdi-fullscreen noti-icon"></i></a></li><!-- notification -->
@@ -80,32 +72,22 @@
                         <div class="dropdown notification-list nav-pro-img"><a
                                 class="dropdown-toggle nav-link arrow-none waves-effect nav-user" data-toggle="dropdown"
                                 href="#" role="button" aria-haspopup="false" aria-expanded="false"><img
-                                    src="{{asset('backend/assets/images/users/user-4.jpg')}}" alt="user" class="rounded-circle"></a>
+                                    src="{{asset('uploads/users')}}/{{ Auth::user()->user_photo }}" alt="user" class="rounded-circle"></a>
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown">
                                 <!-- item--> <a class="dropdown-item" href="#"><i
-                                        class="mdi mdi-account-circle m-r-5"></i> Profile</a> <a class="dropdown-item"
-                                    href="#"><i class="mdi mdi-wallet m-r-5"></i> My Wallet</a> <a
-                                    class="dropdown-item d-block" href="#"><span
-                                        class="badge badge-success float-right">11</span><i
-                                        class="mdi mdi-settings m-r-5"></i> Settings</a> <a class="dropdown-item"
-                                    href="#"><i class="mdi mdi-lock-open-outline m-r-5"></i> Lock screen</a>
-                                <div class="dropdown-divider"></div><a class="dropdown-item text-danger" href="#"><i
-                                        class="mdi mdi-power text-danger"></i> Logout</a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="list-inline menu-left mb-0">
-                    <li class="float-left"><button class="button-menu-mobile open-left waves-effect"><i
-                                class="mdi mdi-menu"></i></button></li>
-                    <li class="d-none d-sm-block">
-                        <div class="dropdown pt-3 d-inline-block"><a class="btn btn-light dropdown-toggle" href="#"
-                                role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">Create</a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink"><a class="dropdown-item"
-                                    href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a
-                                    class="dropdown-item" href="#">Something else here</a>
-                                <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Separated link</a>
+                                        class="mdi mdi-account-circle m-r-5"></i>{{ Auth::user()->name }}</a> 
+                                <div class="dropdown-divider"></div>
+                                
+                                <a class="dropdown-item text-danger" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+
+                                <i class="mdi mdi-power text-danger"></i> 
+
+                                        Logout
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
                             </div>
                         </div>
                     </li>
@@ -120,29 +102,46 @@
                     <!-- Left Menu Start -->
                     <ul class="metismenu" id="side-menu">
                         <li class="menu-title">Main</li>
+                        @if(Auth::user()->role_id == 1)
                         <li><a href="{{route('dashboard')}}" class="waves-effect"><i class="ti-home"></i><span
                                     class="badge badge-primary badge-pill float-right"></span>
                                 <span>Admin Dashboard</span></a></li>
 
+                        <li><a href="{{route('user')}}" class="waves-effect"><i class="ti-user"></i><span>Manage Users</span></a></li>
+                        
 
-
-
-                                <li><a href="javascript:void(0);" class="waves-effect"><i class="ti-android"></i><span> Admin Panel
-                                    <span class="float-right menu-arrow"><i
+                        <li><a href="javascript:void(0);" class="waves-effect"><i class="ti-shopping-cart-full"></i><span>Manage Orders<span class="float-right menu-arrow"><i
                                             class="mdi mdi-chevron-right"></i></span></span></a>
                             <ul class="submenu">
-                            <li><a href="{{route('user')}}" class="waves-effect"><i class="ti-user"></i><span>All Users</span></a></li>
-                        <li><a href="{{route('reservation_view')}}" class="waves-effect"><i class="ti-shopping-cart-full"></i><span>Reservations</span></a></li>
-                        <li><a href="{{route('contact_messages')}}" class="waves-effect"><i class="ti-shopping-cart-full"></i><span>Contact Messages</span></a></li>
-                        <li><a href="{{route('status_index')}}" class="waves-effect"><i class="ti-alarm-clock"></i><span>Add Status</span></a></li>
-                        <li><a href="{{route('team_member')}}" class="waves-effect"><i class="ti-id-badge"></i><span>Add Team Member</span></a></li>
-                        <li><a href="{{route('role_index')}}" class="waves-effect"><i class="ti-id-badge"></i><span>Add User Role</span></a></li>
-                        <li><a href="{{route('add_price')}}" class="waves-effect"><i class="ti-id-clock"></i><span>Add Price List</span></a></li>
-                        <li><a href="{{route('about_us')}}" class="waves-effect"><i class="ti-book"></i><span>Add AboutUs</span></a></li>
-                        
+                        <li><a href="{{route('reservation_view')}}" class="waves-effect"><i></i><span>New Order Placed</span></a></li>
+                        <li><a href="{{route('assign_order')}}" class="waves-effect"><i></i><span>Assign Order</span></a></li>
                             </ul>
                         </li>
-                        <li><a href="javascript:void(0);" class="waves-effect"><i class="ti-email"></i><span> Email
+                        <li><a href="{{route('status_index')}}" class="waves-effect"><i class="ti-alarm-clock"></i><span>Manage Status</span></a></li>
+                        <li><a href="{{route('role_index')}}" class="waves-effect"><i class="ti-id-badge"></i><span>Manage Role</span></a></li>
+                        <li><a href="{{route('add_price')}}" class="waves-effect"><i class="ti-id-badge"></i><span>Manage Price List</span></a></li>
+
+                        <li><a href="javascript:void(0);" class="waves-effect"><i class="ti-shopping-cart-full"></i><span>Static Website<span class="float-right menu-arrow"><i
+                                            class="mdi mdi-chevron-right"></i></span></span></a>
+                            <ul class="submenu">
+                        <li><a href="{{route('about_us')}}" class="waves-effect"><i class="ti-book"></i><span>AboutUs</span></a></li>
+                        <li><a href="{{route('team_member')}}" class="waves-effect"><i class="ti-id-badge"></i><span>Team Member</span></a></li>
+                        <li><a href="{{route('contact_messages')}}" class="waves-effect"><i class="ti-email"></i><span>Contact Messages</span></a></li>
+
+                            </ul>
+                        </li>
+
+                        
+                        
+
+                    @endif    
+
+@if(Auth::user()->role_id == 2)
+<li><a href="{{route('dashboard')}}" class="waves-effect"><i class="ti-home"></i><span
+                                    class="badge badge-primary badge-pill float-right"></span>
+                                <span>Customer Dashboard</span></a></li>
+
+<li><a href="javascript:void(0);" class="waves-effect"><i class="ti-home"></i><span> Email
                                     <span class="float-right menu-arrow"><i
                                             class="mdi mdi-chevron-right"></i></span></span></a>
                             <ul class="submenu">
@@ -151,12 +150,36 @@
                                 <li><a href="email-compose.html">Email Compose</a></li>
                             </ul>
                         </li>
+@endif
+
+
+@if(Auth::user()->role_id == 3)
+<li><a href="{{route('dashboard')}}" class="waves-effect"><i class="ti-home"></i><span
+                                    class="badge badge-primary badge-pill float-right"></span>
+                                <span>Employee Dashboard</span></a></li>
+
+<li><a href="javascript:void(0);" class="waves-effect"><i class="ti-home"></i><span> Email
+                                    <span class="float-right menu-arrow"><i
+                                            class="mdi mdi-chevron-right"></i></span></span></a>
+                            <ul class="submenu">
+                                <li><a href="email-inbox.html">Inbox</a></li>
+                                <li><a href="email-read.html">Email Read</a></li>
+                                <li><a href="email-compose.html">Email Compose</a></li>
+                            </ul>
+                        </li>
+@endif
+
+
+                        
+                        
+
+
                                                 
                     </ul>
-                </div><!-- Sidebar -->
+                </div>
                 <div class="clearfix"></div>
-            </div><!-- Sidebar -left -->
-        </div><!-- Left Sidebar End -->
+            </div>
+        </div>
 
 
         

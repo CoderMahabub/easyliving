@@ -117,9 +117,36 @@ Update Booking
                                         	<input type="text" class="form-control" name="client_district" value="{{ $single_reservation->client_district }}"/>
                                         </div>
                                     </div>
+
+                                    
                                 </div>
 
-
+                                <div class="col-sm-6">
+                                    	<div class="form-group">
+                                        	<select class="selectpicker" name="status1">
+                                                <option>{{ $single_reservation->status }}</option>
+                                                <option> In Progress</option>
+                                                <option> Work Done</option>
+                                                
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                    	<div class="form-group">
+                                        	<select class="selectpicker" name="employee_id">
+                                            
+                
+                                                <option>{{ Auth::user()->find($single_reservation->employee_id)->name }}</option>
+                                                {{ $ids=Auth::user()->where('role_id','3')->get() }}
+                                                @foreach ($ids as $id )
+                                                  <option value="{{ $id->id }}">{{ $id->name }}</option>  
+                                                @endforeach
+                                                
+                                                
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" name="reservation_id" value="{{ $single_reservation->id }}">
                                 <div class="form-group text-center">
                                 	<div class="group-btn">
                                     	<input type="submit" value="Update" class="btn btn-info">

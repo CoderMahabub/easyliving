@@ -67,10 +67,10 @@ Route::get('/customer/login','HomepageController@customer_login')->name('custome
 //=====================================
 
 //Dashboard Home
-Route::get('/admin/dashboard','DashboardController@index')->name('dashboard');
+Route::get('dashboard','DashboardController@index')->name('dashboard');
 
 //user
-Route::get('/admin/user','UserController@index')->name('user');
+Route::get('/users','UserController@index')->name('user');
 
 
 
@@ -111,7 +111,9 @@ Route::get('/admin/messages','ContactusController@messages')->name('contact_mess
 
 
 
-
+//========ROLE===========
+Route::get('/admin/assign-order','AssignOrderController@index')->name('assign_order');
+Route::post('/admin/assign-order/create','AssignOrderController@create')->name('assign_order_create');
 
 
 

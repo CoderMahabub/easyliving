@@ -10,6 +10,10 @@ use Carbon\Carbon;
 
 class ReservationpageController extends Controller
 {
+    function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index(){
         $pricelists = Pricelist::all();
         return view('frontendpages.reservationpage.index',compact('pricelists'));
@@ -40,7 +44,8 @@ class ReservationpageController extends Controller
             'client_email'=>$request->client_email,
             'client_address'=>$request->client_address,            
             'client_sub_district'=>$request->client_sub_district,            
-            'client_district'=>$request->client_district,            
+            'client_district'=>$request->client_district,           
+            'status'=>'Pending',           
             'created_at'=>Carbon::now(),
         ]);
         Alert::toast('Booking Added Successfully','success');

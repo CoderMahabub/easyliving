@@ -60,7 +60,7 @@
                                         <li><a href="{{route('servicepage')}}">Services</a></li>
                                         <li><a href="{{route('reservation')}}">Reservation</a></li>
                                         <li><a href="{{route('contactpage')}}">Contact</a></li>
-                                        <li><a href="{{route('faqpage')}}">FAQ’s</a></li>                                        
+                                       <!-- <li><a href="{{route('faqpage')}}">FAQ’s</a></li>       -->                                 
                                         <li><a href="{{route('customer_login')}}">LogIn</a></li>                                       
                                     </ul>
                                 </div>

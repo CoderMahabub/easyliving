@@ -89,7 +89,10 @@ Book Services
                                 <div class="row">
                                 	<div class="col-sm-6">
                                     	<div class="form-group">
-                                        	<input type="email" class="form-control" name="client_email" placeholder="Email" />
+                                        <input type="email" class="form-control" name="client_email" readonly value="{{ Auth::user()->email }}"/>
+    
+                                                <option></option>
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">

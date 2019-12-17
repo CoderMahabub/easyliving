@@ -8,6 +8,7 @@ use Alert;
 
 class reservationController extends Controller
 {
+    
     function reservation(){
         $reservations =Reservation::latest()->paginate(5);
         $deleted_reservations = Reservation::onlyTrashed()->paginate(3);
@@ -30,8 +31,10 @@ class reservationController extends Controller
             'client_address'=>$request->client_address,
             'client_sub_district'=>$request->client_sub_district,
             'client_district'=>$request->client_district,
+            'status'=>$request->status1,
+            'employee_id'=>$request->employee_id,
             ]);
-        return view('backendpages.reservationView.reservation');
+        return redirect()->route('reservation');
     }
     function delete($reservation_id){
         Reservation::find($reservation_id)->delete();
