@@ -45,10 +45,11 @@ class ReservationpageController extends Controller
             'client_address'=>$request->client_address,            
             'client_sub_district'=>$request->client_sub_district,            
             'client_district'=>$request->client_district,           
+            'client_id'=>$request->client_id,           
             'status'=>'Pending',           
             'created_at'=>Carbon::now(),
         ]);
         Alert::toast('Booking Added Successfully','success');
-        return back();
+        return redirect()->route('dashboard');
     }
 }

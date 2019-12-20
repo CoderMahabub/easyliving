@@ -23,9 +23,8 @@
         <!-- Top Bar Start -->
         <div class="topbar">
             <!-- LOGO -->
-            <div class="topbar-left"><a href="{{route('dashboard')}}" class="logo"><span><<img src="{{asset('frontend/assets/images/logo.png')}}" alt="Logo"
-                            alt="" height="30"> </span><i><img src="{{asset('backend/assets/images/logo-sm.png')}}" alt=""
-                            height="22"></i></a></div>
+            <div class="topbar-left"><a href="{{route('homepage')}}" class="logo"><span><<img src="{{asset('frontend/assets/images/logo.png')}}" alt="Logo"
+                            alt="" height="30"> </span><i><img src="{{asset('backend/assets/images/logo-sm.png')}}" alt="" height="22"></i></a></div>
             <nav class="navbar-custom">
                 <ul class="navbar-right list-inline float-right mb-0">
                                       
@@ -39,31 +38,15 @@
                                 class="badge badge-pill badge-danger noti-icon-badge">{{(App\Reservation::all()->count())}}</span></a>
                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">
                             <!-- item-->
-                            <h6 class="dropdown-item-text">Notifications (258)</h6>
+                            <h6 class="dropdown-item-text">Notifications</h6>
                             <div class="slimscroll notification-item-list">
                                 <!-- item--> <a href="javascript:void(0);" class="dropdown-item notify-item active">
                                     <div class="notify-icon bg-success"><i class="mdi mdi-cart-outline"></i></div>
-                                    <p class="notify-details">Your order is placed<span class="text-muted">Dummy text of
-                                            the printing and typesetting industry.</span></p>
-                                </a><!-- item--> <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon bg-warning"><i class="mdi mdi-message-text-outline"></i>
-                                    </div>
-                                    <p class="notify-details">New Message received<span class="text-muted">You have 87
-                                            unread messages</span></p>
-                                </a><!-- item--> <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <p class="notify-details">New Orders ({{(App\Reservation::all()->count())}})<span class="text-muted">Work in Progress({{(App\Reservation::all()->count())}})</span></p>
+                                </a><!-- item--> <!-- item--> <a href="javascript:void(0);" class="dropdown-item notify-item">
                                     <div class="notify-icon bg-info"><i class="mdi mdi-glass-cocktail"></i></div>
-                                    <p class="notify-details">Your item is shipped<span class="text-muted">It is a long
-                                            established fact that a reader will</span></p>
-                                </a><!-- item--> <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon bg-primary"><i class="mdi mdi-cart-outline"></i></div>
-                                    <p class="notify-details">Your order is placed<span class="text-muted">Dummy text of
-                                            the printing and typesetting industry.</span></p>
-                                </a><!-- item--> <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <div class="notify-icon bg-danger"><i class="mdi mdi-message-text-outline"></i>
-                                    </div>
-                                    <p class="notify-details">New Message received<span class="text-muted">You have 87
-                                            unread messages</span></p>
-                                </a></div><!-- All--> <a href="javascript:void(0);"
+                                    <p class="notify-details">Ordered items are shipped<span class="text-muted">Successfully Delevered Orders ({{(App\ Reservation::onlyTrashed()->count())}})</span></p>
+                                </a><!-- item--> </div><!-- All--> <a href="javascript:void(0);"
                                 class="dropdown-item text-center text-primary">View all <i
                                     class="fi-arrow-right"></i></a>
                         </div>
@@ -74,7 +57,7 @@
                                 href="#" role="button" aria-haspopup="false" aria-expanded="false"><img
                                     src="{{asset('uploads/users')}}/{{ Auth::user()->user_photo }}" alt="user" class="rounded-circle"></a>
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown">
-                                <!-- item--> <a class="dropdown-item" href="#"><i
+                                <!-- item--> <a class="dropdown-item" href="{{ route('profile') }}"><i
                                         class="mdi mdi-account-circle m-r-5"></i>{{ Auth::user()->name }}</a> 
                                 <div class="dropdown-divider"></div>
                                 
@@ -106,17 +89,16 @@
                         <li><a href="{{route('dashboard')}}" class="waves-effect"><i class="ti-home"></i><span
                                     class="badge badge-primary badge-pill float-right"></span>
                                 <span>Admin Dashboard</span></a></li>
+                        <li><a href="{{ route('profile') }}" class="waves-effect"><i class="ti-user"></i><span>User Profile</span></a></li>
+
+
 
                         <li><a href="{{route('user')}}" class="waves-effect"><i class="ti-user"></i><span>Manage Users</span></a></li>
-                        
+                        <li><a href="{{ route('reservation_view') }}" class="waves-effect"><i class="ti-shopping-cart-full"></i><span>Order Assign</span></a></li>
 
-                        <li><a href="javascript:void(0);" class="waves-effect"><i class="ti-shopping-cart-full"></i><span>Manage Orders<span class="float-right menu-arrow"><i
-                                            class="mdi mdi-chevron-right"></i></span></span></a>
-                            <ul class="submenu">
-                        <li><a href="{{route('reservation_view')}}" class="waves-effect"><i></i><span>New Order Placed</span></a></li>
-                        <li><a href="{{route('assign_order')}}" class="waves-effect"><i></i><span>Assign Order</span></a></li>
-                            </ul>
-                        </li>
+
+
+                       
                         <li><a href="{{route('status_index')}}" class="waves-effect"><i class="ti-alarm-clock"></i><span>Manage Status</span></a></li>
                         <li><a href="{{route('role_index')}}" class="waves-effect"><i class="ti-id-badge"></i><span>Manage Role</span></a></li>
                         <li><a href="{{route('add_price')}}" class="waves-effect"><i class="ti-id-badge"></i><span>Manage Price List</span></a></li>
@@ -140,16 +122,9 @@
 <li><a href="{{route('dashboard')}}" class="waves-effect"><i class="ti-home"></i><span
                                     class="badge badge-primary badge-pill float-right"></span>
                                 <span>Customer Dashboard</span></a></li>
+                                <li><a href="{{ route('profile') }}" class="waves-effect"><i class="ti-user"></i><span>Profile</span></a></li>
+                         <li><a href="{{route('customer_orders')}}" class="waves-effect"><i class="ti-alarm-clock"></i><span>My Orders</span></a></li>
 
-<li><a href="javascript:void(0);" class="waves-effect"><i class="ti-home"></i><span> Email
-                                    <span class="float-right menu-arrow"><i
-                                            class="mdi mdi-chevron-right"></i></span></span></a>
-                            <ul class="submenu">
-                                <li><a href="email-inbox.html">Inbox</a></li>
-                                <li><a href="email-read.html">Email Read</a></li>
-                                <li><a href="email-compose.html">Email Compose</a></li>
-                            </ul>
-                        </li>
 @endif
 
 
@@ -157,16 +132,9 @@
 <li><a href="{{route('dashboard')}}" class="waves-effect"><i class="ti-home"></i><span
                                     class="badge badge-primary badge-pill float-right"></span>
                                 <span>Employee Dashboard</span></a></li>
+                                <li><a href="{{ route('profile') }}" class="waves-effect"><i class="ti-user"></i><span>Profile</span></a></li>
+                         <li><a href="{{route('employee_orders')}}" class="waves-effect"><i class="ti-alarm-clock"></i><span>Manage Order</span></a></li>
 
-<li><a href="javascript:void(0);" class="waves-effect"><i class="ti-home"></i><span> Email
-                                    <span class="float-right menu-arrow"><i
-                                            class="mdi mdi-chevron-right"></i></span></span></a>
-                            <ul class="submenu">
-                                <li><a href="email-inbox.html">Inbox</a></li>
-                                <li><a href="email-read.html">Email Read</a></li>
-                                <li><a href="email-compose.html">Email Compose</a></li>
-                            </ul>
-                        </li>
 @endif
 
 

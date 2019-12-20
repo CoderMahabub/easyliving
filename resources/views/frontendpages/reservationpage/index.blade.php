@@ -53,7 +53,7 @@ Book Services
                                         	<select class="selectpicker" name="sub_service">
                                                 <option>Select Sub Service</option>
                                                 @foreach ($pricelists as $pricelist)
-                                                    <option value="{{ $pricelist->id }}">{{ $pricelist->sub_service_name }}</option>
+                                                    <option  value="{{ $pricelist->id }}">{{ $pricelist->sub_service_name }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
@@ -97,7 +97,9 @@ Book Services
                                     </div>
                                     <div class="col-sm-6">
                                     	<div class="form-group">
+
                                         	<input type="text" class="form-control" name="phone_number" placeholder="Phone Number"/>
+                                        	<input type="hidden"  name="client_id" value="{{ Auth::user()->id }}"/>
                                         </div>
                                     </div>
                                 </div>

@@ -60,8 +60,12 @@
                                         <li><a href="{{route('servicepage')}}">Services</a></li>
                                         <li><a href="{{route('reservation')}}">Reservation</a></li>
                                         <li><a href="{{route('contactpage')}}">Contact</a></li>
-                                       <!-- <li><a href="{{route('faqpage')}}">FAQ’s</a></li>       -->                                 
-                                        <li><a href="{{route('customer_login')}}">LogIn</a></li>                                       
+                                        <li><a href="{{route('dashboard')}}">Dashboard <em class="fa fa-angle-down" aria-hidden="true"></em></a>
+                                        	<ul class="dropdown-menu"> 
+                                            	<li><a href="{{route('customer_login')}}">LogIn</a></li>
+                                            	<li><a href="{{route('customer_registration')}}">Registration</a></li> 
+                                            </ul>
+                                        </li>                                       
                                     </ul>
                                 </div>
                             </nav> 
@@ -89,7 +93,7 @@
                             <div class="row">
                             	<div class="col-xs-6">
                                 	<ul class="links">
-                                        <li><a href="{{ route('home') }}">Home</a></li>
+                                    
                                         <li><a href="about-us.html">About</a></li>
                                         <li><a href="#">Blog</a></li>
                                         <li><a href="#">For Corporates</a></li>

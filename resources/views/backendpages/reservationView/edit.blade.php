@@ -11,7 +11,7 @@ Update Booking
             	<div class="container">
                 
                 	<div class="top-desc text-center">
-                        <h2>Edit YOUR Booking</h2>
+                        <h2>Assign Employee & Update Status</h2>
                     </div>
                     <div class="row">
                     	<div class="col-md-8 col-md-offset-2">
@@ -29,10 +29,10 @@ Update Booking
                             
                         	<form action="{{ route('reservation_update') }}" method="post">
                                 @csrf
-                            <div class="row">
+                            <div class="row hidden">
                                 	<div class="col-sm-6">
                                     	<div class="form-group">
-                                        	<select class="selectpicker" name="service">
+                                        	<select class="selectpicker" name="service" readonly>
                                                 <option>{{ $single_reservation->service }}</option>
                                                 <option>Electrical</option>
                                                 <option>Security</option>
@@ -60,7 +60,7 @@ Update Booking
                                     </div>
                                 </div>
 
-                                <div class="row">
+                                <div class="row hidden">
                                 	<div class="col-sm-6">
                                         <div class="form-group">
                                             <input class="form-control" type="date" name="service_date" value="{{ $single_reservation->service_date }}">
@@ -74,7 +74,7 @@ Update Booking
                                 </div>
 <br>
 
-                            	<div class="row">
+                            	<div class="row hidden">
                                 	<div class="col-sm-6">
                                     	<div class="form-group">
                                         	<input type="text" class="form-control" name="first_name" placeholder="First Name" value="{{ $single_reservation->first_name }}"/>
@@ -86,7 +86,7 @@ Update Booking
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row hidden">
                                 	<div class="col-sm-6">
                                     	<div class="form-group">
                                         	<input type="email" class="form-control" name="client_email" value="{{ $single_reservation->client_email }}" />
@@ -99,14 +99,14 @@ Update Booking
                                     </div>
                                 </div>
 
-                                <div class="row">
+                                <div class="row hidden">
                                 	<div class="col-sm-12">
                                     	<div class="form-group">
                                         	<input type="text" class="form-control" name="client_address" value="{{ $single_reservation->client_address }}" />
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row hidden">
                                 	<div class="col-sm-6">
                                     	<div class="form-group">
                                         	<input type="text" class="form-control" name="client_sub_district" value="{{ $single_reservation->client_sub_district }}" />
@@ -120,7 +120,6 @@ Update Booking
 
                                     
                                 </div>
-
                                 <div class="col-sm-6">
                                     	<div class="form-group">
                                         	<select class="selectpicker" name="status1">
@@ -130,22 +129,24 @@ Update Booking
                                                 
                                             </select>
                                         </div>
-                                    </div>
+                                    </div> 
                                     <div class="col-sm-6">
                                     	<div class="form-group">
                                         	<select class="selectpicker" name="employee_id">
-                                            
-                
-                                                <option>{{ Auth::user()->find($single_reservation->employee_id)->name }}</option>
+                                            @if($single_reservation->employee_id != '')
+                                           <option value="{{ $single_reservation->employee_id }}">{{ Auth::user()->find($single_reservation->employee_id)->name }}</option>
+                                           @endif
                                                 {{ $ids=Auth::user()->where('role_id','3')->get() }}
-                                                @foreach ($ids as $id )
+                                                @forelse ($ids as $id )
                                                   <option value="{{ $id->id }}">{{ $id->name }}</option>  
-                                                @endforeach
+                                                @empty
+                                                @endforelse
                                                 
                                                 
                                             </select>
                                         </div>
                                     </div>
+                                   
                                     <input type="hidden" name="reservation_id" value="{{ $single_reservation->id }}">
                                 <div class="form-group text-center">
                                 	<div class="group-btn">

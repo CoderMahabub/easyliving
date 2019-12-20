@@ -13,8 +13,8 @@ class Reservation extends Model
             'sub_service',
             'service_date',
             'service_time',
-            'client_name',
-            'client_phone',
+            'first_name',
+            'last_name',
             'client_email',
             'password',
             'client_address',
@@ -22,6 +22,7 @@ class Reservation extends Model
             'employee_id',
             'district',
             'thana',
+            'client_id',
     ];
 
     function relationBetweenPrice(){

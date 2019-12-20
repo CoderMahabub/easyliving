@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Reservation;
 use Alert;
+use DB;
 
 class reservationController extends Controller
 {
+ 
     
     function reservation(){
         $reservations =Reservation::latest()->paginate(5);
@@ -34,17 +36,17 @@ class reservationController extends Controller
             'status'=>$request->status1,
             'employee_id'=>$request->employee_id,
             ]);
-        return redirect()->route('reservation');
+        return redirect()->route('dashboard');
     }
     function delete($reservation_id){
         Reservation::find($reservation_id)->delete();
-        Alert::toast('Delete to Trash Successfully','success');
+        Alert::toast('Order Delivered to Customer Successfully','success');
         return back();
     }
     
     function restore($reservation_id){
         Reservation::onlyTrashed()->where('id',$reservation_id)->restore();
-        Alert::toast('Restore Reservation Successfully','success');
+        Alert::toast('Placed Previous Ordered Again','success');
         return back();
     }
 

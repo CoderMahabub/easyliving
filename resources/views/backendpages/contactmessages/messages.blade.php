@@ -21,8 +21,7 @@ Status Name
                                                     <th>Phpne Number</th>
                                                     <th>Subject</th>
                                                     <th>Message</th>
-                                                    <th>Created At</th>
-                                                    <th>Updated At</th>
+                                                    <th>Send At</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
@@ -40,9 +39,8 @@ Status Name
                                                     <td>{{ $contactus->created_at }}</td>
                                                     <td>{{ $contactus->updated_at }}</td>
                                                     <td> 
-                                                        <a class="btn btn-primary" href="#">View</a>
-                                                        <a class="btn btn-warning" href="#">Edit</a>
-                                                        <a class="btn btn-danger" href="#">Delete</a>
+                                                        <a class="btn btn-primary" href="#">View View</a>
+                                                        <a class="btn btn-danger" href="#">Delete Message</a>
                                                     </td>
                                                 </trle-striped>
                                                 @endforeach

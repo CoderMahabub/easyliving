@@ -59,9 +59,5 @@ class CustomerregistrationController extends Controller
     }
 
 
-
-
-
-
     //end
 }

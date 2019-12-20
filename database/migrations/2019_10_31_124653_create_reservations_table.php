@@ -27,6 +27,7 @@ class CreateReservationsTable extends Migration
             $table->string('client_address');
             $table->string('client_sub_district');
             $table->string('client_district');
+            $table->string('client_id');
             $table->string('employee_id')->nullable();
             $table->string('status');
             $table->softDeletes();

@@ -123,11 +123,11 @@
                                   <!-- Password -->
                                     <div class="col-md-6">
                                         <label for="useremail">Password</label>
-                                        <input type="text" class="form-control" maxlength="8" name="password" id="alloptions" placeholder="Enter Your Password Max 8 Chars."> </div>
+                                        <input type="password" class="form-control" maxlength="8" name="password" id="alloptions" placeholder="Enter Your Password Max 8 Chars."> </div>
                                   <!-- Confirm Password -->
                                     <div class="col-md-6">
                                         <label for="useremail">Confirm Password</label>
-                                        <input type="text" class="form-control" maxlength="8" name="confirm_password" id="alloptions" placeholder="Enter Your Password"> </div>
+                                        <input type="password" class="form-control" maxlength="8" name="confirm_password" id="alloptions" placeholder="Enter Your Password"> </div>
                                 </div>
                             </div>
                             <div class="form-group row m-t-20">

@@ -15,16 +15,16 @@ User
                                     <div class="table-responsive">
                                         <table class="table table-bordered table-striped table-dark mb-0">
                                             <thead>
-                                                <tr>
+                                                <tr class="bg-success">
                                                     <th>ID</th>
-                                                    <th>Name</th>
-                                                    <th>Email</th>
-                                                    <th>Role</th>
-                                                    <th>District</th>
-                                                    <th>Thana</th>
-                                                    <th>Photo</th>
-                                                    <th>Created at</th>
-                                                    <th>Updated at</th>
+                                                    
+                                                    <th>User's Photo</th>
+                                                    <th>User's Name</th>
+                                                    <th>User's Email</th>
+                                                    <th>User's Role</th>
+                                                    <th>Users Address</th>
+                                                    <th>Registered at</th>
+                                                    <th>Verified at</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
@@ -32,15 +32,14 @@ User
                                             @forelse ($users as $user)
                                                 <tr>
                                                     <th scope="row">{{ $user->id }}</th>
+                                                    <td class="img-thumbnail rounded"> <img src="{{ asset('uploads/users') }}/{{ $user->user_photo }}" ></td>
                                                     <td>{{ $user->name }}</td>
                                                     <td>{{ $user->email }}</td>
                                                     <td>{{ $user->relationshipBetweenRole->role_name }}</td>
-                                                    <td>{{ $user->district }}</td>
-                                                    <td>{{ $user->thana }}</td>
-                                                    <td> <img src="{{ asset('uploads/users') }}/{{ $user->user_photo }}" ></td>
+                                                    <td>{{ $user->address }}</td>
                                                     <td>{{ $user->created_at }}</td>
                                                     <td>{{ $user->updated_at }}</td>
-                                                    <td><a class="btn btn-danger" href="#">Remove To Trash</a></td>
+                                                    <td><a class="btn btn-danger" href="{{ url('/users/delete') }}/{{ $user->id }}">Delete User</a></td>
                                                     @empty
                                                     <td>No Data</td>
                                                 </trle-striped>

@@ -67,10 +67,15 @@ Route::get('/customer/login','HomepageController@customer_login')->name('custome
 //=====================================
 
 //Dashboard Home
-Route::get('dashboard','DashboardController@index')->name('dashboard');
+Route::get('/dashboard','DashboardController@index')->name('dashboard');
+Route::get('/MyProfile','DashboardController@profile')->name('profile');
+
+Route::get('/employee/orders','DashboardController@employee_orders')->name('employee_orders');
+Route::get('/customer/orders','DashboardController@customer_orders')->name('customer_orders');
 
 //user
 Route::get('/users','UserController@index')->name('user');
+Route::get('/users/delete/{user_id}','UserController@delete')->name('user_delete');
 
 
 
@@ -137,11 +142,6 @@ Route::get('/admin/service-price/delete/{price_id}','PricelistController@delete'
 
 
 
-//========CUSTOMER DASHBOARD===========
-Route::get('/customer/dashboard','CustomerDashboardController@index')->name('customer_dashboard');
-
-//========EMPLOYEE DASHBOARD===========
-Route::get('/employee/dashboard','EmployeeDashboardController@index')->name('employee_dashboard');
 
 
 
@@ -164,4 +164,4 @@ Route::get('/', function () {
 
 Auth::routes(['verify'=>true]);
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
