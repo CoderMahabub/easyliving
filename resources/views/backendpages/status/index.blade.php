@@ -67,7 +67,6 @@ Status Name
                                                     <td>{{ $status->created_at }}</td>
                                                     <td>{{ $status->updated_at }}</td>
                                                     <td> 
-                                                        <a class="btn btn-primary" href="{{ route('status_index') }}">View</a>
                                                         <a class="btn btn-warning" href="{{ url('/admin/status') }}/{{ $status->id }}">Edit</a>
                                                         <a class="btn btn-danger" href="{{ url('/admin/status/delete') }}/{{ $status->id }}">Move to Trash</a>
                                                     </td>

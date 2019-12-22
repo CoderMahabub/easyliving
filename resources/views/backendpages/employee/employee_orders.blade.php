@@ -61,10 +61,10 @@ My Orders To Serve
 
 
 
-
+<!-- 
 
                 <div class="container">
-                <!-- end row -->
+                 
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="card">
@@ -112,6 +112,6 @@ My Orders To Serve
                         </div>
                     </div>
                 </div>
-
+-->
 @endsection
             

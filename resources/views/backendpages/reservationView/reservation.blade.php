@@ -23,7 +23,6 @@ Total Reservations
                                                     <th>CUSTOMER NAME</th>
                                                     <th>PHONE & EMAIL</th>
                                                     <th>DELEVERY ADDRESS</th>
-                                                    <th>Assigned Employee</th>
                                                     <th>STATUS</th>
                                                     <th>ACTION</th>
                                                 </tr>
@@ -39,8 +38,7 @@ Total Reservations
                                                     <td>{{ $reservation->first_name }} {{ $reservation->last_name }}</td>
                                                     <td>{{ $reservation->phone_number }} & {{ Str::limit($reservation->client_email,15) }}</td>
                                                     <td>{{ $reservation->client_address}}, {{ $reservation->client_sub_district}}, {{ Str::limit( $reservation->client_district,10)}}</td>
-                                                    <td class="text-primary">{{ $reservation->employee_id }}</td>
-                                                    <td class="text-info">{{ $reservation->status }}</td>
+                                                   <td class="text-info">{{ $reservation->status }}</td>
                                                     <td> 
                                                         <a class="btn btn-warning" href="{{ url('/admin/reservation/edit') }}/{{ $reservation->id }}">Assign Employee</a>
                                                         <a class="btn btn-danger" href="{{ url('/admin/reservation/delete') }}/{{ $reservation->id }}">Confirm Delivery</a>
@@ -51,7 +49,7 @@ Total Reservations
                                                 @endforelse
                                         </tbody>
                                     </table>
-                                   {{ $reservation->relationBetweenPrice->sum('sub_service_price') }}
+                                   Total Price Ordered = {{ $reservation->relationBetweenPrice->sum('sub_service_price') }}
                                 </div>
                             {{ $reservations->links() }}
                             </div>
@@ -71,7 +69,7 @@ Total Reservations
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="mt-0 header-title">Deleted Reservation</h4>
+                                    <h4 class="mt-0 header-title">Delivered Orders</h4>
                                     <div class="table-responsive">
                                         <table class="table table-bordered table-striped table-dark mb-0">
                                             <thead>

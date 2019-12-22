@@ -31,6 +31,8 @@
                     <li class="dropdown notification-list list-inline-item d-none d-md-inline-block"><a
                             class="nav-link waves-effect" href="#" id="btn-fullscreen"><i
                                 class="mdi mdi-fullscreen noti-icon"></i></a></li><!-- notification -->
+                                
+                    @if(Auth::user()->role_id == 1)
                     <li class="dropdown notification-list list-inline-item"><a
                             class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#"
                             role="button" aria-haspopup="false" aria-expanded="false"><i
@@ -47,10 +49,60 @@
                                     <div class="notify-icon bg-info"><i class="mdi mdi-glass-cocktail"></i></div>
                                     <p class="notify-details">Ordered items are shipped<span class="text-muted">Successfully Delevered Orders ({{(App\ Reservation::onlyTrashed()->count())}})</span></p>
                                 </a><!-- item--> </div><!-- All--> <a href="javascript:void(0);"
-                                class="dropdown-item text-center text-primary">View all <i
+                                class="dropdown-item text-center text-primary"><i
                                     class="fi-arrow-right"></i></a>
                         </div>
                     </li>
+                    @endif
+
+                    @if(Auth::user()->role_id == 2)
+                    <li class="dropdown notification-list list-inline-item"><a
+                            class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#"
+                            role="button" aria-haspopup="false" aria-expanded="false"><i
+                                class="mdi mdi-bell-outline noti-icon"></i> <span
+                                class="badge badge-pill badge-danger noti-icon-badge">{{ App\Reservation::where('client_id',Auth::user()->id)->get()->count()}}</span></a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">
+                            <!-- item-->
+                            <h6 class="dropdown-item-text">Notifications</h6>
+                            <div class="slimscroll notification-item-list">
+                                <!-- item--> <a href="javascript:void(0);" class="dropdown-item notify-item active">
+                                    <div class="notify-icon bg-success"><i class="mdi mdi-cart-outline"></i></div>
+                                    <p class="notify-details">New Orders ({{ App\Reservation::where('client_id',Auth::user()->id)->get()->count()}})<span class="text-muted">Work in Progress({{ App\Reservation::where('client_id',Auth::user()->id)->get()->count()}})</span></p>
+                                </a><!-- item--> <!-- item--> <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-info"><i class="mdi mdi-glass-cocktail"></i></div>
+                                    <p class="notify-details">Ordered items are shipped<span class="text-muted">Successfully Delevered Orders ({{ App\Reservation::where('client_id',Auth::user()->id)->onlyTrashed()->count()}})</span></p>
+                                </a><!-- item--> </div><!-- All--> <a href="javascript:void(0);"
+                                class="dropdown-item text-center text-primary"><i
+                                    class="fi-arrow-right"></i></a>
+                        </div>
+                    </li>
+                    @endif
+
+                    @if(Auth::user()->role_id == 3)
+                    <li class="dropdown notification-list list-inline-item"><a
+                            class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#"
+                            role="button" aria-haspopup="false" aria-expanded="false"><i
+                                class="mdi mdi-bell-outline noti-icon"></i> <span
+                                class="badge badge-pill badge-danger noti-icon-badge">{{ App\Reservation::where('employee_id',Auth::user()->id)->get()->count()}}</span></a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">
+                            <!-- item-->
+                            <h6 class="dropdown-item-text">Notifications</h6>
+                            <div class="slimscroll notification-item-list">
+                                <!-- item--> <a href="javascript:void(0);" class="dropdown-item notify-item active">
+                                    <div class="notify-icon bg-success"><i class="mdi mdi-cart-outline"></i></div>
+                                    <p class="notify-details">New Orders ({{ App\Reservation::where('employee_id',Auth::user()->id)->get()->count()}})<span class="text-muted">Work in Progress({{ App\Reservation::where('employee_id',Auth::user()->id)->get()->count()}})</span></p>
+                                </a><!-- item--> <!-- item--> <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-info"><i class="mdi mdi-glass-cocktail"></i></div>
+                                    <p class="notify-details">Ordered items are shipped<span class="text-muted">Successfully Delevered Orders ({{ App\Reservation::where('employee_id',Auth::user()->id)->onlyTrashed()->count()}})</span></p>
+                                </a><!-- item--> </div><!-- All--> <a href="javascript:void(0);"
+                                class="dropdown-item text-center text-primary"><i
+                                    class="fi-arrow-right"></i></a>
+                        </div>
+                    </li>
+                    @endif
+
+
+
                     <li class="dropdown notification-list list-inline-item">
                         <div class="dropdown notification-list nav-pro-img"><a
                                 class="dropdown-toggle nav-link arrow-none waves-effect nav-user" data-toggle="dropdown"
@@ -85,25 +137,25 @@
                     <!-- Left Menu Start -->
                     <ul class="metismenu" id="side-menu">
                         <li class="menu-title">Main</li>
-                        @if(Auth::user()->role_id == 1)
+
+                    @if(Auth::user()->role_id == 1)
                         <li><a href="{{route('dashboard')}}" class="waves-effect"><i class="ti-home"></i><span
                                     class="badge badge-primary badge-pill float-right"></span>
                                 <span>Admin Dashboard</span></a></li>
+                                
                         <li><a href="{{ route('profile') }}" class="waves-effect"><i class="ti-user"></i><span>User Profile</span></a></li>
 
-
-
                         <li><a href="{{route('user')}}" class="waves-effect"><i class="ti-user"></i><span>Manage Users</span></a></li>
+
                         <li><a href="{{ route('reservation_view') }}" class="waves-effect"><i class="ti-shopping-cart-full"></i><span>Order Assign</span></a></li>
 
-
-
-                       
                         <li><a href="{{route('status_index')}}" class="waves-effect"><i class="ti-alarm-clock"></i><span>Manage Status</span></a></li>
-                        <li><a href="{{route('role_index')}}" class="waves-effect"><i class="ti-id-badge"></i><span>Manage Role</span></a></li>
-                        <li><a href="{{route('add_price')}}" class="waves-effect"><i class="ti-id-badge"></i><span>Manage Price List</span></a></li>
 
-                        <li><a href="javascript:void(0);" class="waves-effect"><i class="ti-shopping-cart-full"></i><span>Static Website<span class="float-right menu-arrow"><i
+                        <li><a href="{{route('role_index')}}" class="waves-effect"><i class="ti-id-badge"></i><span>Manage Role</span></a></li>
+
+                        <li><a href="{{route('add_price')}}" class="waves-effect"><i class="ti-id-badge"></i><span>Manage Service & Price</span></a></li>
+
+                        <li><a href="javascript:void(0);" class="waves-effect"><i class="ti-shopping-cart-full"></i><span>Manage Static Part<span class="float-right menu-arrow"><i
                                             class="mdi mdi-chevron-right"></i></span></span></a>
                             <ul class="submenu">
                         <li><a href="{{route('about_us')}}" class="waves-effect"><i class="ti-book"></i><span>AboutUs</span></a></li>
@@ -112,30 +164,27 @@
 
                             </ul>
                         </li>
-
-                        
-                        
-
                     @endif    
 
-@if(Auth::user()->role_id == 2)
-<li><a href="{{route('dashboard')}}" class="waves-effect"><i class="ti-home"></i><span
-                                    class="badge badge-primary badge-pill float-right"></span>
-                                <span>Customer Dashboard</span></a></li>
-                                <li><a href="{{ route('profile') }}" class="waves-effect"><i class="ti-user"></i><span>Profile</span></a></li>
-                         <li><a href="{{route('customer_orders')}}" class="waves-effect"><i class="ti-alarm-clock"></i><span>My Orders</span></a></li>
+                    @if(Auth::user()->role_id == 2)
+                        <li><a href="{{route('dashboard')}}" class="waves-effect"><i class="ti-home"></i><span
+                        class="badge badge-primary badge-pill float-right"></span>
+                        <span>Customer Dashboard</span></a></li>
+                        <li><a href="{{ route('profile') }}" class="waves-effect"><i class="ti-user"></i><span>Profile</span></a></li>
+                         <li><a href="{{route('customer_orders')}}" class="waves-effect"><i class="ti-shopping-cart"></i><span>My Orders</span></a></li>
+                         <li><a href="{{route('reservation')}}" class="waves-effect"><i class="ti-shopping-cart-full"></i><span>Place New Order</span></a></li>
 
-@endif
+                    @endif
 
 
-@if(Auth::user()->role_id == 3)
-<li><a href="{{route('dashboard')}}" class="waves-effect"><i class="ti-home"></i><span
-                                    class="badge badge-primary badge-pill float-right"></span>
-                                <span>Employee Dashboard</span></a></li>
-                                <li><a href="{{ route('profile') }}" class="waves-effect"><i class="ti-user"></i><span>Profile</span></a></li>
-                         <li><a href="{{route('employee_orders')}}" class="waves-effect"><i class="ti-alarm-clock"></i><span>Manage Order</span></a></li>
+                    @if(Auth::user()->role_id == 3)
+                        <li><a href="{{route('dashboard')}}" class="waves-effect"><i class="ti-home"></i><span
+                            class="badge badge-primary badge-pill float-right"></span>
+                        <span>Employee Dashboard</span></a></li>
+                        <li><a href="{{ route('profile') }}" class="waves-effect"><i class="ti-user"></i><span>Profile</span></a></li>
+                        <li><a href="{{route('employee_orders')}}" class="waves-effect"><i class="ti-alarm-clock"></i><span>Manage Order</span></a></li>
 
-@endif
+                    @endif
 
 
                         

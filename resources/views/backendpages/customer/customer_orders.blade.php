@@ -23,7 +23,7 @@ My Orders
                                                     <th>CUSTOMER NAME</th>
                                                     <th>PHONE & EMAIL</th>
                                                     <th>DELEVERY ADDRESS</th>
-                                                    <th>SERVICE PROVIDER</th>
+                                                    <!--<th>SERVICE PROVIDER</th>-->
                                                     <th>STATUS</th>
                                                     <th>ACTION</th>
                                                 </tr>
@@ -39,7 +39,7 @@ My Orders
                                                     <td>{{ $reservation->first_name }} {{ $reservation->last_name }}</td>
                                                     <td>{{ $reservation->phone_number }}, {{ Str::limit($reservation->client_email,15) }}</td>
                                                     <td>{{ $reservation->client_address}}, {{ $reservation->client_sub_district}}, {{ Str::limit( $reservation->client_district,10)}}</td>
-                                                    <td class="text-info">{{ $reservation->employee_id }}</td>
+                                                    <!--<td class="text-info">{{ $reservation->employee_id }}</td>-->
                                                     <td class="text-info">{{ $reservation->status }}</td>
                                                     <td><a class="btn btn-danger" href="{{ url('/admin/reservation/delete') }}/{{ $reservation->id }}">Cancel Order</a>
                                                     </td>
@@ -63,9 +63,8 @@ My Orders
 
 
 
-
+                <!--            
                 <div class="container">
-                <!-- end row -->
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="card">
@@ -112,7 +111,7 @@ My Orders
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
 @endsection
             
